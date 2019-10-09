@@ -77,6 +77,8 @@ extern bool sf_task_misfit(struct task_struct *p);
  * @cp: The cpupri context
  * @p: The task
  * @lowest_mask: A mask to fill in with selected CPUs (or NULL)
+ * @fitness_fn: A pointer to a function to do custom checks whether the CPU
+ *              fits a specific criteria so that we only return those CPUs.
  *
  * Note: This function returns the recommended CPUs as calculated during the
  * current invocation.  By the time the call returns, the CPUs may have in
@@ -88,7 +90,8 @@ extern bool sf_task_misfit(struct task_struct *p);
  * Return: (int)bool - CPUs were found
  */
 int cpupri_find(struct cpupri *cp, struct task_struct *p,
-		struct cpumask *lowest_mask)
+		struct cpumask *lowest_mask,
+		bool (*fitness_fn)(struct task_struct *p, int cpu))
 {
 	int idx = 0;
 	int task_pri = convert_prio(p->prio);
@@ -133,17 +136,14 @@ retry:
 			continue;
 
 		if (lowest_mask) {
+			int cpu;
+
 			cpumask_and(lowest_mask, &p->cpus_allowed, vec->mask);
 			cpumask_andnot(lowest_mask, lowest_mask,
 				       cpu_isolated_mask);
 			if (drop_nopreempts)
 				drop_nopreempt_cpus(lowest_mask);
-#ifdef OPLUS_FEATURE_SCHED_ASSIST
-			if (drop_uxtasks)
-				drop_ux_task_cpus(p, lowest_mask);
-			if (drop_uxtasks && sf_task_misfit(p))
-				kick_min_cpu_from_mask(lowest_mask);
-#endif /* OPLUS_FEATURE_SCHED_ASSIST */
+
 			/*
 			 * We have to ensure that we have at least one bit
 			 * still set in the array, since the map could have
@@ -152,7 +152,23 @@ retry:
 			 * condition, simply act as though we never hit this
 			 * priority level and continue on.
 			 */
-			if (cpumask_any(lowest_mask) >= nr_cpu_ids)
+			if (cpumask_empty(lowest_mask))
+				continue;
+
+			if (!fitness_fn)
+				return 1;
+
+			/* Ensure the capacity of the CPUs fit the task */
+			for_each_cpu(cpu, lowest_mask) {
+				if (!fitness_fn(p, cpu))
+					cpumask_clear_cpu(cpu, lowest_mask);
+			}
+
+			/*
+			 * If no CPU at the current priority can fit the task
+			 * continue looking
+			 */
+			if (cpumask_empty(lowest_mask))
 				continue;
 		}
 
