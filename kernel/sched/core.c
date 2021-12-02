@@ -1305,7 +1305,7 @@ static void __setscheduler_uclamp(struct task_struct *p,
 		/* By default, RT tasks always get 100% boost */
 		if (sched_feat(SUGOV_RT_MAX_FREQ) &&
 			       unlikely(rt_task(p) &&
-			       clamp_id == UCLAMP_MIN)) 
+			       clamp_id == UCLAMP_MIN))
 			value = sysctl_sched_uclamp_util_min_rt_default;
 		else
 			value = uclamp_none(clamp_id);
@@ -1387,6 +1387,20 @@ bool uclamp_latency_sensitive(struct task_struct *p)
 #endif
 }
 #endif /* CONFIG_SMP */
+
+static void __init init_uclamp_rq(struct rq *rq)
+{
+	enum uclamp_id clamp_id;
+	struct uclamp_rq *uc_rq = rq->uclamp;
+
+	for_each_clamp_id(clamp_id) {
+		uc_rq[clamp_id] = (struct uclamp_rq) {
+			.value = uclamp_none(clamp_id)
+		};
+	}
+
+	rq->uclamp_flags = UCLAMP_FLAG_IDLE;
+}
 
 static void __init init_uclamp(void)
 {
