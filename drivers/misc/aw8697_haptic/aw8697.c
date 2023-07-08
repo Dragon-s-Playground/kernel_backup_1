@@ -83,12 +83,9 @@ struct pm_qos_request pm_qos_req_vb;
 
 static uint8_t AW8697_HAPTIC_RAM_VBAT_COMP_GAIN;
 
-<<<<<<< HEAD
 static uint8_t AW8697_HAPTIC_HIGH_LEVEL_REG_VAL = 0x28;
 
 
-=======
->>>>>>> 30d479c5d077 (drivers: misc: Import aw8697 haptic drivers from realme Q5pro/GT-Neo-3T AndroidS)
 #define AW8697_RTP_NAME_MAX        64
 //static char *aw8697_ram_name = "aw8697_haptic.bin";
 //
@@ -124,7 +121,6 @@ static char aw8697_ram_name_170_soft[5][30] ={
 {"aw8697_haptic_170_soft.bin"},
 };
 
-<<<<<<< HEAD
 static char aw8697_ram_name_150[5][30] ={
 {"aw8697_haptic_150.bin"},
 {"aw8697_haptic_150.bin"},
@@ -141,8 +137,6 @@ static char aw8697_ram_name_150_soft[5][30] ={
 {"aw8697_haptic_150_soft.bin"},
 };
 
-=======
->>>>>>> 30d479c5d077 (drivers: misc: Import aw8697 haptic drivers from realme Q5pro/GT-Neo-3T AndroidS)
 static char aw8697_long_sound_rtp_name[5][30] ={
     {"aw8697_long_sound_168.bin"},
     {"aw8697_long_sound_170.bin"},
@@ -164,7 +158,6 @@ static char aw8697_old_steady_test_rtp_name_0815[11][60] ={
     {"aw8697_old_steady_test_RTP_52_180Hz.bin"},
 };
 
-<<<<<<< HEAD
 static char aw8697_old_steady_test_rtp_name_081538[11][60] ={
 	{"aw8697_old_steady_test_RTP_52_145Hz.bin"},
 	{"aw8697_old_steady_test_RTP_52_146Hz.bin"},
@@ -179,8 +172,6 @@ static char aw8697_old_steady_test_rtp_name_081538[11][60] ={
 	{"aw8697_old_steady_test_RTP_52_155Hz.bin"},
 };
 
-=======
->>>>>>> 30d479c5d077 (drivers: misc: Import aw8697 haptic drivers from realme Q5pro/GT-Neo-3T AndroidS)
 static char aw8697_high_temp_high_humidity_0815[11][60] ={
     {"aw8697_high_temp_high_humidity_channel_RTP_51_160Hz.bin"},
     {"aw8697_high_temp_high_humidity_channel_RTP_51_162Hz.bin"},
@@ -195,7 +186,6 @@ static char aw8697_high_temp_high_humidity_0815[11][60] ={
     {"aw8697_high_temp_high_humidity_channel_RTP_51_180Hz.bin"},
 };
 
-<<<<<<< HEAD
 static char aw8697_high_temp_high_humidity_081538[11][60] ={
 	{"aw8697_high_temp_high_humidity_channel_RTP_51_145Hz.bin"},
 	{"aw8697_high_temp_high_humidity_channel_RTP_51_146Hz.bin"},
@@ -210,8 +200,6 @@ static char aw8697_high_temp_high_humidity_081538[11][60] ={
 	{"aw8697_high_temp_high_humidity_channel_RTP_51_155Hz.bin"},
 };
 
-=======
->>>>>>> 30d479c5d077 (drivers: misc: Import aw8697 haptic drivers from realme Q5pro/GT-Neo-3T AndroidS)
 static char aw8697_old_steady_test_rtp_name_0832[11][60] ={
     {"aw8697_old_steady_test_RTP_52_225Hz.bin"},
     {"aw8697_old_steady_test_RTP_52_226Hz.bin"},
@@ -300,7 +288,6 @@ static char aw8697_ringtone_rtp_f0_170_name[][AW8697_RTP_NAME_MAX] ={
 };
 
 #ifdef OPLUS_FEATURE_CHG_BASIC
-<<<<<<< HEAD
 static char aw8697_rtp_name_145Hz[][AW8697_RTP_NAME_MAX] = {
 	{"aw8697_rtp.bin"},
 	{"aw8697_Hearty_channel_RTP_1.bin"},
@@ -969,8 +956,6 @@ static char aw8697_rtp_name_155Hz[][AW8697_RTP_NAME_MAX] = {
 #endif /* OPLUS_FEATURE_CHG_BASIC */
 
 #ifdef OPLUS_FEATURE_CHG_BASIC
-=======
->>>>>>> 30d479c5d077 (drivers: misc: Import aw8697 haptic drivers from realme Q5pro/GT-Neo-3T AndroidS)
 static char aw8697_rtp_name_165Hz[][AW8697_RTP_NAME_MAX] = {
     {"aw8697_rtp.bin"},
     {"aw8697_Hearty_channel_RTP_1.bin"},
@@ -1088,13 +1073,8 @@ static char aw8697_rtp_name_165Hz[][AW8697_RTP_NAME_MAX] = {
 	{"aw8697_stepable_regulate_RTP_105.bin"},
 	{"aw8697_voice_level_bar_edge_RTP_106.bin"},
 	{"aw8697_strength_level_bar_edge_RTP_107.bin"},
-<<<<<<< HEAD
 	{"aw8697_charging_simulation_RTP_108.bin"},
 	{"aw8697_fingerprint_success_RTP_109.bin"},
-=======
-	{"aw8697_reserved_108.bin"},
-	{"aw8697_reserved_109.bin"},
->>>>>>> 30d479c5d077 (drivers: misc: Import aw8697 haptic drivers from realme Q5pro/GT-Neo-3T AndroidS)
 
 	{"aw8697_fingerprint_effect1_RTP_110.bin"},
 	{"aw8697_fingerprint_effect2_RTP_111.bin"},
@@ -1109,11 +1089,7 @@ static char aw8697_rtp_name_165Hz[][AW8697_RTP_NAME_MAX] = {
 
     {"aw8697_Miss_RTP_120.bin"},
     {"aw8697_Scenic_RTP_121_165Hz.bin"},
-<<<<<<< HEAD
     {"aw8697_voice_assistant_RTP_122.bin"},
-=======
-    {"aw8697_reserved_122.bin"},
->>>>>>> 30d479c5d077 (drivers: misc: Import aw8697 haptic drivers from realme Q5pro/GT-Neo-3T AndroidS)
 /* used for oplusos 7 */
 	{"aw8697_Appear_channel_RTP_oplusos7_123_165Hz.bin"},
     {"aw8697_Miss_RTP_oplusos7_124_165Hz.bin"},
@@ -1288,13 +1264,8 @@ static char aw8697_rtp_name[][AW8697_RTP_NAME_MAX] = {
 	{"aw8697_stepable_regulate_RTP_105.bin"},
 	{"aw8697_voice_level_bar_edge_RTP_106.bin"},
 	{"aw8697_strength_level_bar_edge_RTP_107.bin"},
-<<<<<<< HEAD
 	{"aw8697_charging_simulation_RTP_108.bin"},
 	{"aw8697_fingerprint_success_RTP_109.bin"},
-=======
-	{"aw8697_reserved_108.bin"},
-	{"aw8697_reserved_109.bin"},
->>>>>>> 30d479c5d077 (drivers: misc: Import aw8697 haptic drivers from realme Q5pro/GT-Neo-3T AndroidS)
 
 	{"aw8697_fingerprint_effect1_RTP_110.bin"},
 	{"aw8697_fingerprint_effect2_RTP_111.bin"},
@@ -1309,11 +1280,7 @@ static char aw8697_rtp_name[][AW8697_RTP_NAME_MAX] = {
 
     {"aw8697_Miss_RTP_120.bin"},
     {"aw8697_Scenic_RTP_121.bin"},
-<<<<<<< HEAD
     {"aw8697_voice_assistant_RTP_122.bin"},
-=======
-    {"aw8697_reserved_122.bin"},
->>>>>>> 30d479c5d077 (drivers: misc: Import aw8697 haptic drivers from realme Q5pro/GT-Neo-3T AndroidS)
 /* used for oplusos 7 */
 	{"aw8697_Appear_channel_RTP_oplusos7_123.bin"},
     {"aw8697_Miss_RTP_oplusos7_124.bin"},
@@ -1364,15 +1331,9 @@ static char aw8697_rtp_name[][AW8697_RTP_NAME_MAX] = {
     {"aw8697_reserved_164.bin"},
     {"aw8697_reserved_165.bin"},
     {"aw8697_reserved_166.bin"},
-<<<<<<< HEAD
     {"ring_McLarn_167.bin"},
     {"notif_Ardour_168.bin"},
     {"notif_Chic_169.bin"},
-=======
-    {"aw8697_reserved_167.bin"},
-    {"aw8697_reserved_168.bin"},
-    {"aw8697_reserved_169.bin"},
->>>>>>> 30d479c5d077 (drivers: misc: Import aw8697 haptic drivers from realme Q5pro/GT-Neo-3T AndroidS)
     {"aw8697_realme_gt_RTP_170_170Hz.bin"},
 
 	{"ringtone_Alacrity_RTP.bin"},
@@ -1621,13 +1582,8 @@ static char aw8697_rtp_name_175Hz[][AW8697_RTP_NAME_MAX] = {
 	{"aw8697_stepable_regulate_RTP_105.bin"},
 	{"aw8697_voice_level_bar_edge_RTP_106.bin"},
 	{"aw8697_strength_level_bar_edge_RTP_107.bin"},
-<<<<<<< HEAD
 	{"aw8697_charging_simulation_RTP_108.bin"},
 	{"aw8697_fingerprint_success_RTP_109.bin"},
-=======
-	{"aw8697_reserved_108.bin"},
-	{"aw8697_reserved_109.bin"},
->>>>>>> 30d479c5d077 (drivers: misc: Import aw8697 haptic drivers from realme Q5pro/GT-Neo-3T AndroidS)
 
 	{"aw8697_fingerprint_effect1_RTP_110.bin"},
 	{"aw8697_fingerprint_effect2_RTP_111.bin"},
@@ -1642,11 +1598,7 @@ static char aw8697_rtp_name_175Hz[][AW8697_RTP_NAME_MAX] = {
 
     {"aw8697_Miss_RTP_120.bin"},
     {"aw8697_Scenic_RTP_121_175Hz.bin"},
-<<<<<<< HEAD
     {"aw8697_voice_assistant_RTP_122.bin"},
-=======
-    {"aw8697_reserved_122.bin"},
->>>>>>> 30d479c5d077 (drivers: misc: Import aw8697 haptic drivers from realme Q5pro/GT-Neo-3T AndroidS)
 /* used for oplusos 7 */
 	{"aw8697_Appear_channel_RTP_oplusos7_123_175Hz.bin"},
     {"aw8697_Miss_RTP_oplusos7_124_175Hz.bin"},
@@ -2205,7 +2157,6 @@ static char aw8697_rtp_name_0832_230Hz[][AW8697_RTP_NAME_MAX] = {
 #endif /* OPLUS_FEATURE_CHG_BASIC */
 
 static char aw8697_rtp_name_0832_234Hz[][AW8697_RTP_NAME_MAX] = {
-<<<<<<< HEAD
 	{"aw8697_rtp.bin"},
 #ifdef OPLUS_FEATURE_CHG_BASIC
 	{"aw8697_Hearty_channel_RTP_1.bin"},
@@ -2316,118 +2267,6 @@ static char aw8697_rtp_name_0832_234Hz[][AW8697_RTP_NAME_MAX] = {
 	{"aw8697_Newfeeling_98_RTP_235Hz.bin"},
 	{"aw8697_nature_99_RTP_235Hz.bin"},
 	/* Added by maruthanad.hari@bsp, oneplus tones stop */
-=======
-    {"aw8697_rtp.bin"},
-#ifdef OPLUS_FEATURE_CHG_BASIC
-    {"aw8697_Hearty_channel_RTP_1.bin"},
-    {"aw8697_Instant_channel_RTP_2_234Hz.bin"},
-    {"aw8697_Music_channel_RTP_3.bin"},
-    {"aw8697_Percussion_channel_RTP_4.bin"},
-    {"aw8697_Ripple_channel_RTP_5.bin"},
-    {"aw8697_Bright_channel_RTP_6.bin"},
-    {"aw8697_Fun_channel_RTP_7.bin"},
-    {"aw8697_Glittering_channel_RTP_8.bin"},
-    {"aw8697_Granules_channel_RTP_9_234Hz.bin"},
-    {"aw8697_Harp_channel_RTP_10.bin"},
-    {"aw8697_Impression_channel_RTP_11.bin"},
-    {"aw8697_Ingenious_channel_RTP_12_234Hz.bin"},
-    {"aw8697_Joy_channel_RTP_13_234Hz.bin"},
-    {"aw8697_Overtone_channel_RTP_14.bin"},
-    {"aw8697_Receive_channel_RTP_15_234Hz.bin"},
-    {"aw8697_Splash_channel_RTP_16_234Hz.bin"},
-
-    {"aw8697_About_School_RTP_17_234Hz.bin"},
-    {"aw8697_Bliss_RTP_18.bin"},
-    {"aw8697_Childhood_RTP_19_234Hz.bin"},
-    {"aw8697_Commuting_RTP_20_234Hz.bin"},
-    {"aw8697_Dream_RTP_21.bin"},
-    {"aw8697_Firefly_RTP_22_234Hz.bin"},
-    {"aw8697_Gathering_RTP_23.bin"},
-    {"aw8697_Gaze_RTP_24_234Hz.bin"},
-    {"aw8697_Lakeside_RTP_25_234Hz.bin"},
-    {"aw8697_Lifestyle_RTP_26.bin"},
-    {"aw8697_Memories_RTP_27_234Hz.bin"},
-    {"aw8697_Messy_RTP_28_234Hz.bin"},
-    {"aw8697_Night_RTP_29_234Hz.bin"},
-    {"aw8697_Passionate_Dance_RTP_30_234Hz.bin"},
-    {"aw8697_Playground_RTP_31_234Hz.bin"},
-    {"aw8697_Relax_RTP_32_234Hz.bin"},
-    {"aw8697_Reminiscence_RTP_33.bin"},
-    {"aw8697_Silence_From_Afar_RTP_34_234Hz.bin"},
-    {"aw8697_Silence_RTP_35_234Hz.bin"},
-    {"aw8697_Stars_RTP_36_234Hz.bin"},
-    {"aw8697_Summer_RTP_37_234Hz.bin"},
-    {"aw8697_Toys_RTP_38_234Hz.bin"},
-    {"aw8697_Travel_RTP_39.bin"},
-    {"aw8697_Vision_RTP_40.bin"},
-
-    {"aw8697_waltz_channel_RTP_41_234Hz.bin"},
-    {"aw8697_cut_channel_RTP_42_234Hz.bin"},
-    {"aw8697_clock_channel_RTP_43_234Hz.bin"},
-    {"aw8697_long_sound_channel_RTP_44_234Hz.bin"},
-    {"aw8697_short_channel_RTP_45_234Hz.bin"},
-    {"aw8697_two_error_remaind_RTP_46_234Hz.bin"},
-
-    {"aw8697_kill_program_RTP_47_234Hz.bin"},
-    {"aw8697_Simple_channel_RTP_48.bin"},
-    {"aw8697_Pure_RTP_49_234Hz.bin"},
-    {"aw8697_reserved_sound_channel_RTP_50.bin"},
-
-    {"aw8697_high_temp_high_humidity_channel_RTP_51.bin"},
-
-    {"aw8697_old_steady_test_RTP_52.bin"},
-    {"aw8697_listen_pop_53_235Hz.bin"},
-    {"aw8697_desk_7_RTP_54_234Hz.bin"},
-    {"aw8697_nfc_10_RTP_55_234Hz.bin"},
-    {"aw8697_vibrator_remain_12_RTP_56_234Hz.bin"},
-    {"aw8697_notice_13_RTP_57.bin"},
-    {"aw8697_third_ring_14_RTP_58.bin"},
-    {"aw8697_reserved_59.bin"},
-
-    {"aw8697_honor_fisrt_kill_RTP_60_234Hz.bin"},
-    {"aw8697_honor_two_kill_RTP_61_234Hz.bin"},
-    {"aw8697_honor_three_kill_RTP_62_234Hz.bin"},
-    {"aw8697_honor_four_kill_RTP_63_234Hz.bin"},
-    {"aw8697_honor_five_kill_RTP_64_234Hz.bin"},
-    {"aw8697_honor_three_continu_kill_RTP_65_234Hz.bin"},
-    {"aw8697_honor_four_continu_kill_RTP_66_234Hz.bin"},
-    {"aw8697_honor_unstoppable_RTP_67_234Hz.bin"},
-    {"aw8697_honor_thousands_kill_RTP_68_234Hz.bin"},
-    {"aw8697_honor_lengendary_RTP_69_234Hz.bin"},
-    {"aw8697_Airy_morning_RTP_70_234Hz.bin"},
-    {"aw8697_Temple_morning_RTP_71_234Hz.bin"},
-    {"aw8697_Water_cicidas_72_RTP_234Hz.bin"},
-    {"aw8697_Electro_club_RTP_73_234Hz.bin"},
-    {"aw8697_Vacation_RTP_74_234Hz.bin"},
-    {"aw8697_Jazz_funk_RTP_75_234Hz.bin"},
-    {"aw8697_House_club_RTP_76_234Hz.bin"},
-    {"aw8697_temple_tone_RTP_77_234Hz.bin"},
-    {"aw8697_Jazz_dreamy_RTP_78_234Hz.bin"},
-    {"aw8697_Jazz_modern_RTP_79_234Hz.bin"},
-    {"aw8697_Tone_round_RTP_80_234Hz.bin"},
-    {"aw8697_Digi_rise_RTP_81_234Hz.bin"},
-    {"aw8697_Wood_phone_RTP_82_234Hz.bin"},
-    {"aw8697_Hey_RTP_83_234Hz.bin"},
-    {"aw8697_Zanza_RTP_84_234Hz.bin"},
-    {"aw8697_Info_RTP_85_234Hz.bin"},
-    {"aw8697_Tip_top_RTP_86_234Hz.bin"},
-    {"aw8697_Opop_short_RTP_87_234Hz.bin"},
-    {"aw8697_bowl_bells_RTP_88_234Hz.bin"},
-    {"aw8697_jumpy_RTP_89_234Hz.bin"},
-
-    {"aw8697_reserved_90.bin"},
-    {"aw8697_reserved_91.bin"},
-    {"aw8697_reserved_92.bin"},
-    {"aw8697_reserved_93.bin"},
-/* Added by maruthanad.hari@bsp, oneplus tones start */
-	{"aw8697_ALCloudscape_94_RTP_235Hz.bin"},
-    {"aw8697_ALGoodenergy_95_RTP_235Hz.bin"},
-    {"aw8697_NTblink_96_RTP_235Hz.bin"},
-    {"aw8697_NTwhoop_97_RTP_235Hz.bin"},
-    {"aw8697_Newfeeling_98_RTP_235Hz.bin"},
-    {"aw8697_nature_99_RTP_235Hz.bin"},
-/* Added by maruthanad.hari@bsp, oneplus tones stop */
->>>>>>> 30d479c5d077 (drivers: misc: Import aw8697 haptic drivers from realme Q5pro/GT-Neo-3T AndroidS)
 	{"aw8697_soldier_first_kill_RTP_100_234Hz.bin"},
 	{"aw8697_soldier_second_kill_RTP_101_234Hz.bin"},
 	{"aw8697_soldier_third_kill_RTP_102_234Hz.bin"},
@@ -2450,7 +2289,6 @@ static char aw8697_rtp_name_0832_234Hz[][AW8697_RTP_NAME_MAX] = {
 	{"aw8697_breath_simulation_RTP_118_234Hz.bin"},
 	{"aw8697_reserved_119.bin"},
 
-<<<<<<< HEAD
 	{"aw8697_Miss_RTP_120.bin"},
 	{"aw8697_Scenic_RTP_121_234Hz.bin"},
 	{"aw8697_reserved_122.bin"},
@@ -2635,186 +2473,6 @@ static char aw8697_rtp_name_0832_234Hz[][AW8697_RTP_NAME_MAX] = {
 	{"460ms_RTP.bin"},
 	{"480ms_RTP.bin"},
 	{"500ms_RTP.bin"},
-=======
-    {"aw8697_Miss_RTP_120.bin"},
-    {"aw8697_Scenic_RTP_121_234Hz.bin"},
-    {"aw8697_reserved_122.bin"},
-/* used for oplusos 7 */
-	{"aw8697_Appear_channel_RTP_oplusos7_123_234Hz.bin"},
-    {"aw8697_Miss_RTP_oplusos7_124_234Hz.bin"},
-    {"aw8697_Music_channel_RTP_oplusos7_125_234Hz.bin"},
-    {"aw8697_Percussion_channel_RTP_oplusos7_126_234Hz.bin"},
-    {"aw8697_Ripple_channel_RTP_oplusos7_127_234Hz.bin"},
-    {"aw8697_Bright_channel_RTP_oplusos7_128_234Hz.bin"},
-    {"aw8697_Fun_channel_RTP_oplusos7_129_234Hz.bin"},
-    {"aw8697_Glittering_channel_RTP_oplusos7_130_234Hz.bin"},
-    {"aw8697_Harp_channel_RTP_oplusos7_131_234Hz.bin"},
-    {"aw8697_Overtone_channel_RTP_oplusos7_132_234Hz.bin"},
-    {"aw8697_Simple_channel_RTP_oplusos7_133_234Hz.bin"},
-
-	{"aw8697_Seine_past_RTP_oplusos7_134_234Hz.bin"},
-    {"aw8697_Classical_ring_RTP_oplusos7_135_234Hz.bin"},
-    {"aw8697_Long_for_RTP_oplusos7_136_234Hz.bin"},
-    {"aw8697_Romantic_RTP_oplusos7_137_234Hz.bin"},
-    {"aw8697_Bliss_RTP_oplusos7_138_234Hz.bin"},
-    {"aw8697_Dream_RTP_oplusos7_139_234Hz.bin"},
-    {"aw8697_Relax_RTP_oplusos7_140_234Hz.bin"},
-    {"aw8697_Joy_channel_RTP_oplusos7_141_234Hz.bin"},
-    {"aw8697_weather_wind_RTP_oplusos7_142_234Hz.bin"},
-    {"aw8697_weather_cloudy_RTP_oplusos7_143_234Hz.bin"},
-    {"aw8697_weather_thunderstorm_RTP_oplusos7_144_234Hz.bin"},
-    {"aw8697_weather_default_RTP_oplusos7_145_234Hz.bin"},
-    {"aw8697_weather_sunny_RTP_oplusos7_146_234Hz.bin"},
-    {"aw8697_weather_smog_RTP_oplusos7_147_234Hz.bin"},
-    {"aw8697_weather_snow_RTP_oplusos7_148_234Hz.bin"},
-    {"aw8697_weather_rain_RTP_oplusos7_149_234Hz.bin"},
-    {"aw8697_Artist_Notification_RTP_150_234Hz.bin"},
-    {"aw8697_Artist_Ringtong_RTP_151_234Hz.bin"},
-    {"aw8697_Artist_Text_RTP_152_234Hz.bin"},
-    {"aw8697_Artist_Alarm_RTP_153_234Hz.bin"},
-#endif
-    {"aw8697_rtp_lighthouse.bin"},
-    {"aw8697_rtp_silk_19081.bin"},
-    {"aw8697_reserved_156.bin"},
-    {"aw8697_reserved_157.bin"},
-    {"aw8697_reserved_158.bin"},
-    {"aw8697_reserved_159.bin"},
-    {"aw8697_reserved_160.bin"},
-
-	{"aw8697_realme_its_realme_RTP_161_234Hz.bin"},
-    {"aw8697_realme_tune_RTP_162_234Hz.bin"},
-    {"aw8697_realme_jingle_RTP_163_234Hz.bin"},
-    {"aw8697_reserved_164.bin"},
-    {"aw8697_reserved_165.bin"},
-    {"aw8697_reserved_166.bin"},
-    {"aw8697_reserved_167.bin"},
-    {"aw8697_reserved_168.bin"},
-    {"aw8697_reserved_169.bin"},
-    {"aw8697_reserved_170.bin"},
-
-	/* Added by maruthanad.hari@bsp, oneplus ringtone start */
-	{"aw8697_aw8697_ringtone_Alacrity_RTP_171_234Hz.bin"},
-    {"aw8697_ring_Amenity_RTP_172_234Hz.bin"},
-    {"aw8697_ringtone_Blues_RTP_173_234Hz.bin"},
-    {"aw8697_ring_Bounce_RTP_174_234Hz.bin"},
-    {"aw8697_ring_Calm_RTP_175_234Hz.bin"},
-    {"aw8697_ringtone_Cloud_RTP_176_234Hz.bin"},
-    {"aw8697_ringtone_Cyclotron_RTP_177_234Hz.bin"},
-    {"aw8697_ringtone_Distinct_RTP_178_234Hz.bin"},
-    {"aw8697_ringtone_Dynamic_RTP_179_234Hz.bin"},
-    {"aw8697_ringtone_Echo_RTP_180_234Hz.bin"},
-    {"aw8697_ringtone_Expect_RTP_181_234Hz.bin"},
-    {"aw8697_ringtone_Fanatical_RTP_182_234Hz.bin"},
-    {"aw8697_ringtone_Funky_RTP_183_234Hz.bin"},
-    {"aw8697_ringtone_Guitar_RTP_184_234Hz.bin"},
-    {"aw8697_ringtone_Harping_RTP_185_234Hz.bin"},
-    {"aw8697_ringtone_Highlight_RTP_186_234Hz.bin"},
-    {"aw8697_ringtone_Idyl_RTP_187_234Hz.bin"},
-    {"aw8697_ringtone_Innocence_RTP_188_234Hz.bin"},
-    {"aw8697_ringtone_Journey_RTP_189_234Hz.bin"},
-    {"aw8697_ringtone_Joyous_RTP_190_234Hz.bin"},
-    {"aw8697_ring_Lazy_RTP_191_234Hz.bin"},
-    {"aw8697_ringtone_Marimba_RTP_192_234Hz.bin"},
-    {"aw8697_ring_Mystical_RTP_193_234Hz.bin"},
-    {"aw8697_ringtone_Old_telephone_RTP_194_234Hz.bin"},
-    {"aw8697_ringtone_Oneplus_tune_RTP_195_234Hz.bin"},
-    {"aw8697_ringtone_Rhythm_RTP_196_234Hz.bin"},
-    {"aw8697_ringtone_Optimistic_RTP_197_234Hz.bin"},
-    {"aw8697_ringtone_Piano_RTP_198_234Hz.bin"},
-    {"aw8697_ring_Whirl_RTP_199_234Hz.bin"},
-    {"aw8697_VZW_Alrwave_RTP_200_234Hz.bin"},
-    {"aw8697_t-jingle_RTP_201_234Hz.bin"},
-    {"aw8697_ringtone_Eager_RTP_202_234Hz.bin"},
-    {"aw8697_ringtone_Ebullition_RTP_203_234Hz.bin"},
-    {"aw8697_ringtone_Friendship_RTP_204_234Hz.bin"},
-    {"aw8697_ringtone_Jazz_life_RTP_205_234Hz.bin"},
-    {"aw8697_ringtone_Sun_glittering_RTP_206_234Hz.bin"},
-    {"aw8697_notif_Allay_RTP_207_234Hz.bin"},
-    {"aw8697_notif_Allusion_RTP_208_234Hz.bin"},
-    {"aw8697_notif_Amiable_RTP_209_234Hz.bin"},
-    {"aw8697_notif_Blare_RTP_210_234Hz.bin"},
-    {"aw8697_notif_Blissful_RTP_211_234Hz.bin"},
-    {"aw8697_notif_Brisk_RTP_212_234Hz.bin"},
-    {"aw8697_notif_Bubble_RTP_213_234Hz.bin"},
-    {"aw8697_notif_Cheerful_RTP_214_234Hz.bin"},
-    {"aw8697_notif_Clear_RTP_215_234Hz.bin"},
-    {"aw8697_notif_Comely_RTP_216_234Hz.bin"},
-    {"aw8697_notif_Cozy_RTP_217_234Hz.bin"},
-    {"aw8697_notif_Ding_RTP_218_234Hz.bin"},
-    {"aw8697_notif_Effervesce_RTP_219_234Hz.bin"},
-    {"aw8697_notif_Elegant_RTP_220_234Hz.bin"},
-    {"aw8697_notif_Free_RTP_221_234Hz.bin"},
-    {"aw8697_notif_Hallucination_RTP_222_234Hz.bin"},
-    {"aw8697_notif_Inbound_RTP_223_234Hz.bin"},
-    {"aw8697_notif_Light_RTP_224_234Hz.bin"},
-    {"aw8697_notif_Meet_RTP_225_234Hz.bin"},
-    {"aw8697_notif_Naivety_RTP_226_234Hz.bin"},
-    {"aw8697_notif_Quickly_RTP_227_234Hz.bin"},
-    {"aw8697_notif_Rhythm_RTP_228_234Hz.bin"},
-    {"aw8697_notif_Surprise_RTP_229_234Hz.bin"},
-    {"aw8697_notif_Twinkle_RTP_230_234Hz.bin"},
-    {"aw8697_Version_Alert_RTP_231_234Hz.bin"},
-    {"aw8697_alarm_Alarm_clock_RTP_232_234Hz.bin"},
-    {"aw8697_alarm_Beep_RTP_233_234Hz.bin"},
-    {"aw8697_alarm_Breeze_RTP_234_234Hz.bin"},
-    {"aw8697_alarm_Dawn_RTP_235_234Hz.bin"},
-    {"aw8697_alarm_Dream_RTP_236_234Hz.bin"},
-    {"aw8697_alarm_Fluttering_RTP_237_234Hz.bin"},
-    {"aw8697_alarm_Flyer_RTP_238_234Hz.bin"},
-    {"aw8697_alarm_Interesting_RTP_239_234Hz.bin"},
-    {"aw8697_alarm_Leisurely_RTP_240_234Hz.bin"},
-    {"aw8697_alarm_Memory_RTP_241_234Hz.bin"},
-    {"aw8697_alarm_Relieved_RTP_242_234Hz.bin"},
-    {"aw8697_alarm_Ripple_RTP_243_234Hz.bin"},
-    {"aw8697_alarm_Slowly_RTP_244_234Hz.bin"},
-    {"aw8697_alarm_spring_RTP_245_234Hz.bin"},
-    {"aw8697_alarm_Stars_RTP_246_234Hz.bin"},
-    {"aw8697_alarm_Surging_RTP_247_234Hz.bin"},
-    {"aw8697_alarm_tactfully_RTP_248_234Hz.bin"},
-    {"aw8697_alarm_The_wind_RTP_249_234Hz.bin"},
-    {"aw8697_alarm_Walking_in_the_rain_RTP_250_234Hz.bin"},
-    {"aw8697_BoHaoPanAnJian_RTP_251_234Hz.bin"},
-    {"aw8697_BoHaoPanAnNiu_RTP_252_234Hz.bin"},
-    {"aw8697_BoHaoPanKuaiJie_RTP_253_234Hz.bin"},
-    {"aw8697_DianHuaGuaDuan_RTP_254_234Hz.bin"},
-    {"aw8697_DianJinMoShiQieHuan_RTP_255_234Hz.bin"},
-    {"aw8697_HuaDongTiaoZhenDong_RTP_256_234Hz.bin"},
-    {"aw8697_LeiShen_RTP_257_234Hz.bin"},
-    {"aw8697_XuanZhongYouXi_RTP_258_234Hz.bin"},
-    {"aw8697_YeJianMoShiDaZi_RTP_259_234Hz.bin"},
-    {"aw8697_YouXiSheZhiKuang_RTP_260_234Hz.bin"},
-    {"aw8697_ZhuanYeMoShi_RTP_261_234Hz.bin"},
-    {"aw8697_Climber_RTP_262_234Hz.bin"},
-    {"aw8697_Chase_RTP_263_234Hz.bin"},
-    {"aw8697_shuntai24k_RTP_264_234Hz.bin"},
-    {"aw8697_wentai24k_RTP_265_234Hz.bin"},
-    /* Added by maruthanad.hari@bsp, oneplus ringtone end */
-	{"20ms_RTP.bin"},
-    {"40ms_RTP.bin"},
-    {"60ms_RTP.bin"},
-    {"80ms_RTP.bin"},
-    {"100ms_RTP.bin"},
-    {"120ms_RTP.bin"},
-    {"140ms_RTP.bin"},
-    {"160ms_RTP.bin"},
-    {"180ms_RTP.bin"},
-    {"200ms_RTP.bin"},
-    {"220ms_RTP.bin"},
-    {"240ms_RTP.bin"},
-    {"260ms_RTP.bin"},
-    {"280ms_RTP.bin"},
-    {"300ms_RTP.bin"},
-    {"320ms_RTP.bin"},
-    {"340ms_RTP.bin"},
-    {"360ms_RTP.bin"},
-    {"380ms_RTP.bin"},
-    {"400ms_RTP.bin"},
-    {"420ms_RTP.bin"},
-    {"440ms_RTP.bin"},
-    {"460ms_RTP.bin"},
-    {"480ms_RTP.bin"},
-    {"500ms_RTP.bin"},
->>>>>>> 30d479c5d077 (drivers: misc: Import aw8697 haptic drivers from realme Q5pro/GT-Neo-3T AndroidS)
 };
 
 static char aw8697_rtp_name_0832_237Hz[][AW8697_RTP_NAME_MAX] = {
@@ -3657,7 +3315,6 @@ static char aw8697_rtp_name_1815_170Hz[][AW8697_RTP_NAME_MAX] = {
     {"480ms_RTP.bin"},
     {"500ms_RTP.bin"},
 };
-<<<<<<< HEAD
 
 static char aw8697_rtp_name_0619_166Hz[][AW8697_RTP_NAME_MAX] = {
 	{"aw8697_rtp.bin"},
@@ -4559,8 +4216,6 @@ static char aw8697_rtp_name_0619_174Hz[][AW8697_RTP_NAME_MAX] = {
 	{"500ms_RTP_174Hz.bin"},
 };
 
-=======
->>>>>>> 30d479c5d077 (drivers: misc: Import aw8697 haptic drivers from realme Q5pro/GT-Neo-3T AndroidS)
 #endif
 
 struct aw8697_container *aw8697_rtp = NULL;
@@ -4813,7 +4468,6 @@ static int aw8697_rtp_update(struct aw8697 *aw8697)
     aw8697_i2c_write(aw8697, AW8697_REG_RAMADDRH, aw8697_cont->data[0+shift]);
     aw8697_i2c_write(aw8697, AW8697_REG_RAMADDRL, aw8697_cont->data[1+shift]);
     shift = aw8697->ram.ram_shift;
-<<<<<<< HEAD
 	i = aw8697->ram.ram_shift;
 	while(i < aw8697_cont->len) {
 		if (aw8697_cont->len-i < 2048) {
@@ -4823,11 +4477,6 @@ static int aw8697_rtp_update(struct aw8697 *aw8697)
 		aw8697_i2c_writes(aw8697, AW8697_REG_RAMDATA, &aw8697_cont->data[i], 2048);
 		i += 2048;
 	}
-=======
-    for(i=shift; i<aw8697_cont->len; i++) {
-        aw8697_i2c_write(aw8697, AW8697_REG_RAMDATA, aw8697_cont->data[i]);
-    }
->>>>>>> 30d479c5d077 (drivers: misc: Import aw8697 haptic drivers from realme Q5pro/GT-Neo-3T AndroidS)
 
 #if 0
     /* ram check */
@@ -4937,13 +4586,10 @@ static int aw8697_ram_update(struct aw8697 *aw8697)
 		    aw8697->f0 > F0_VAL_MAX_0815) {
 			aw8697->f0 = 1700;
 		}
-<<<<<<< HEAD
 	} else if (aw8697->device_id == 81538) {
 		if (aw8697->f0 < F0_VAL_MIN_081538 || aw8697->f0 > F0_VAL_MAX_081538) {
 			aw8697->f0 = 1500;
 		}
-=======
->>>>>>> 30d479c5d077 (drivers: misc: Import aw8697 haptic drivers from realme Q5pro/GT-Neo-3T AndroidS)
 	} else if (aw8697->device_id == 619) {
 		if (aw8697->f0 < F0_VAL_MIN_0619 || aw8697->f0 > F0_VAL_MAX_0619) {
 			aw8697->f0 = 1700;
@@ -5087,7 +4733,6 @@ static int aw8697_ram_update(struct aw8697 *aw8697)
                     aw8697_ram_name_0619[index], aw8697->dev, GFP_KERNEL,
                     aw8697, aw8697_ram_loaded);
 	} else if (aw8697->device_id == 1040) {
-<<<<<<< HEAD
 		pr_info("%s:1040 haptic bin name  %s \n", __func__, aw8697_ram_name_1040[index]);
 		return request_firmware_nowait(THIS_MODULE, FW_ACTION_HOTPLUG,
                     aw8697_ram_name_1040[index], aw8697->dev, GFP_KERNEL,
@@ -5109,12 +4754,6 @@ static int aw8697_ram_update(struct aw8697 *aw8697)
 				aw8697_ram_name_150[index], aw8697->dev, GFP_KERNEL,
 				aw8697, aw8697_ram_loaded);
 		}
-=======
-		pr_info("%s:0619 haptic bin name  %s \n", __func__, aw8697_ram_name_1040[index]);
-		return request_firmware_nowait(THIS_MODULE, FW_ACTION_HOTPLUG,
-                    aw8697_ram_name_1040[index], aw8697->dev, GFP_KERNEL,
-                    aw8697, aw8697_ram_loaded);
->>>>>>> 30d479c5d077 (drivers: misc: Import aw8697 haptic drivers from realme Q5pro/GT-Neo-3T AndroidS)
 	} else {
 		if (aw8697->vibration_style == AW8697_HAPTIC_VIBRATION_CRISP_STYLE) {
 			pr_info("%s:crisp haptic bin name  %s \n", __func__, aw8697_ram_name[index]);
@@ -5235,15 +4874,12 @@ static int aw8697_haptic_play_mode(struct aw8697 *aw8697, unsigned char play_mod
             }
 
            aw8697_haptic_active(aw8697);
-<<<<<<< HEAD
 
 #if defined (OPLUS_FEATURE_CHG_BASIC) && !defined(CONFIG_OPLUS_HAPTIC_OOS)
 	   if (aw8697->device_id == DEV_ID_0619)
 		   break;
 #endif
 
-=======
->>>>>>> 30d479c5d077 (drivers: misc: Import aw8697 haptic drivers from realme Q5pro/GT-Neo-3T AndroidS)
             if(aw8697->auto_boost) {
                 aw8697_i2c_write_bits(aw8697, AW8697_REG_BST_AUTO,
                         AW8697_BIT_BST_AUTO_BST_RAM_MASK, AW8697_BIT_BST_AUTO_BST_RAM_ENABLE);
@@ -5328,11 +4964,7 @@ static int aw8697_haptic_play_mode(struct aw8697 *aw8697, unsigned char play_mod
 static int aw8697_haptic_play_go(struct aw8697 *aw8697, bool flag)
 {
     unsigned char reg_val = 0;
-<<<<<<< HEAD
 	pr_debug("%s enter,flag = %d\n", __func__, flag);
-=======
-    pr_debug("%s enter\n", __func__);
->>>>>>> 30d479c5d077 (drivers: misc: Import aw8697 haptic drivers from realme Q5pro/GT-Neo-3T AndroidS)
 
     if(flag == true) {
         aw8697_i2c_write_bits(aw8697, AW8697_REG_GO,
@@ -5475,7 +5107,6 @@ static int aw8697_haptic_set_bst_peak_cur(struct aw8697 *aw8697, unsigned char p
     return 0;
 }
 
-<<<<<<< HEAD
 static unsigned char aw8697_haptic_set_level(struct aw8697 *aw8697, int gain)
 {
     int val = 80;
@@ -5492,11 +5123,6 @@ static unsigned char aw8697_haptic_set_level(struct aw8697 *aw8697, int gain)
 static int aw8697_haptic_set_gain(struct aw8697 *aw8697, unsigned char gain)
 {
     aw8697_i2c_write(aw8697, AW8697_REG_DATDBG, aw8697_haptic_set_level(aw8697, gain));
-=======
-static int aw8697_haptic_set_gain(struct aw8697 *aw8697, unsigned char gain)
-{
-    aw8697_i2c_write(aw8697, AW8697_REG_DATDBG, gain);
->>>>>>> 30d479c5d077 (drivers: misc: Import aw8697 haptic drivers from realme Q5pro/GT-Neo-3T AndroidS)
     return 0;
 }
 
@@ -5824,22 +5450,13 @@ static int aw8697_haptic_ram_vbat_comp(struct aw8697 *aw8697, bool flag)
  * f0
  *
  *****************************************************/
-<<<<<<< HEAD
 static int aw8697_haptic_set_f0_preset(struct aw8697 *aw8697)
-=======
-static int aw8697_haptic_set_f0_preset(struct aw8697 *aw8697, unsigned int f0_pre)
->>>>>>> 30d479c5d077 (drivers: misc: Import aw8697 haptic drivers from realme Q5pro/GT-Neo-3T AndroidS)
 {
     unsigned int f0_reg = 0;
 
     pr_debug("%s enter\n", __func__);
 
-<<<<<<< HEAD
 	f0_reg = 1000000000 / (aw8697->f0_pre * AW8697_HAPTIC_F0_COEFF);
-=======
-	f0_reg = 1000000000 / (f0_pre * AW8697_HAPTIC_F0_COEFF);
-	pr_err("%s: f0_pre = %d, f0_reg = 0x%x\n", __func__, f0_pre, f0_reg);
->>>>>>> 30d479c5d077 (drivers: misc: Import aw8697 haptic drivers from realme Q5pro/GT-Neo-3T AndroidS)
     aw8697_i2c_write(aw8697, AW8697_REG_F_PRE_H, (unsigned char)((f0_reg>>8)&0xff));
     aw8697_i2c_write(aw8697, AW8697_REG_F_PRE_L, (unsigned char)((f0_reg>>0)&0xff));
 
@@ -6019,7 +5636,6 @@ static void aw8697_dump_rtp_regs(struct aw8697 *aw8697)
 
 static void aw8697_pm_qos_enable(struct aw8697 *aw8697, bool enabled)
 {
-<<<<<<< HEAD
 	mutex_lock(&aw8697->qos_lock);
 	if (enabled) {
 		if (!pm_qos_request_active(&pm_qos_req_vb)) {
@@ -6031,16 +5647,6 @@ static void aw8697_pm_qos_enable(struct aw8697 *aw8697, bool enabled)
 		pm_qos_update_request(&pm_qos_req_vb, PM_QOS_DEFAULT_VALUE);
 	}
 	mutex_unlock(&aw8697->qos_lock);
-=======
-    if (enabled) {
-        if (atomic_read(&aw8697->qos_cnt) == 0)
-            pm_qos_add_request(&pm_qos_req_vb, PM_QOS_CPU_DMA_LATENCY, PM_QOS_VALUE_VB);
-        atomic_inc(&aw8697->qos_cnt);
-    } else {
-        if (atomic_dec_and_test(&aw8697->qos_cnt))
-            pm_qos_remove_request(&pm_qos_req_vb);
-    }
->>>>>>> 30d479c5d077 (drivers: misc: Import aw8697 haptic drivers from realme Q5pro/GT-Neo-3T AndroidS)
 }
 
 static int aw8697_haptic_rtp_init(struct aw8697 *aw8697)
@@ -6051,13 +5657,9 @@ static int aw8697_haptic_rtp_init(struct aw8697 *aw8697)
 
     pr_info("%s enter\n", __func__);
     aw8697_pm_qos_enable(aw8697, true);
-<<<<<<< HEAD
 	if(aw8697->ram.base_addr == 0) {
 		aw8697_ram_update(aw8697);
 	}
-=======
-
->>>>>>> 30d479c5d077 (drivers: misc: Import aw8697 haptic drivers from realme Q5pro/GT-Neo-3T AndroidS)
     aw8697->rtp_cnt = 0;
     mutex_lock(&aw8697->rtp_lock);
     aw8697_dump_rtp_regs(aw8697);
@@ -6087,13 +5689,8 @@ static int aw8697_haptic_rtp_init(struct aw8697 *aw8697)
         }
         aw8697->rtp_cnt += buf_len;
 		aw8697_i2c_read(aw8697, AW8697_REG_GLB_STATE, &glb_state_val);
-<<<<<<< HEAD
 		if (aw8697->rtp_cnt >= aw8697_rtp->len || aw8697->ram.base_addr == 0 || (glb_state_val & 0x0f) == 0) {
 			pr_info("%s: rtp update complete, aw8697->ram.base_addr[%d], glb_state_val[%d]\n", __func__, aw8697->ram.base_addr, glb_state_val);
-=======
-		if (aw8697->rtp_cnt == aw8697_rtp->len || (glb_state_val & 0x0f) == 0) {
-			pr_info("%s: rtp update complete, glb_state_val=0x%x\n", __func__, glb_state_val);
->>>>>>> 30d479c5d077 (drivers: misc: Import aw8697 haptic drivers from realme Q5pro/GT-Neo-3T AndroidS)
             aw8697->rtp_cnt = 0;
             aw8697_dump_rtp_regs(aw8697);
             mutex_unlock(&aw8697->rtp_lock);
@@ -6141,10 +5738,6 @@ static int aw8697_clock_OSC_trim_calibration(unsigned long int theory_time, unsi
             return DFT_LRA_TRIM_CODE;
         }
 
-<<<<<<< HEAD
-=======
-        real_code = 32 + ((real_time - theory_time)* 400 )/ theory_time ;
->>>>>>> 30d479c5d077 (drivers: misc: Import aw8697 haptic drivers from realme Q5pro/GT-Neo-3T AndroidS)
         real_code = ((real_time - theory_time)* 4000) / theory_time;
         real_code = ((real_code%10 < 5)? 0 : 1) + real_code/10;
         real_code = 32 + real_code;
@@ -6319,15 +5912,11 @@ static int aw8697_rtp_osc_calibration(struct aw8697 *aw8697)
             {
                 if(aw8697->timeval_flags ==1)
                 {
-<<<<<<< HEAD
 #ifdef KERNEL_VERSION_49
                     do_gettimeofday(&aw8697->start);
 #else
 					aw8697->kstart = ktime_get();
 #endif
-=======
-                    do_gettimeofday(&aw8697->start);
->>>>>>> 30d479c5d077 (drivers: misc: Import aw8697 haptic drivers from realme Q5pro/GT-Neo-3T AndroidS)
                     aw8697->timeval_flags = 0;
                 }
 
@@ -6342,20 +5931,15 @@ static int aw8697_rtp_osc_calibration(struct aw8697 *aw8697)
         osc_int_state = aw8697_haptic_osc_read_INT(aw8697);
         if(osc_int_state&AW8697_BIT_SYSINT_DONEI)
         {
-<<<<<<< HEAD
 #ifdef KERNEL_VERSION_49
             do_gettimeofday(&aw8697->end);
 #else
 			aw8697->kend = ktime_get();
 #endif
-=======
-            do_gettimeofday(&aw8697->end);
->>>>>>> 30d479c5d077 (drivers: misc: Import aw8697 haptic drivers from realme Q5pro/GT-Neo-3T AndroidS)
             pr_info("%s vincent playback done aw8697->rtp_cnt= %d \n", __func__,aw8697->rtp_cnt);
             break;
         }
 
-<<<<<<< HEAD
 #ifdef KERNEL_VERSION_49
         do_gettimeofday(&aw8697->end);
         aw8697->microsecond = (aw8697->end.tv_sec - aw8697->start.tv_sec)*1000000 +
@@ -6364,11 +5948,6 @@ static int aw8697_rtp_osc_calibration(struct aw8697 *aw8697)
 		aw8697->kend = ktime_get();
 		aw8697->microsecond = ktime_to_us(ktime_sub(aw8697->kend, aw8697->kstart));
 #endif
-=======
-        do_gettimeofday(&aw8697->end);
-        aw8697->microsecond = (aw8697->end.tv_sec - aw8697->start.tv_sec)*1000000 +
-            (aw8697->end.tv_usec - aw8697->start.tv_usec);
->>>>>>> 30d479c5d077 (drivers: misc: Import aw8697 haptic drivers from realme Q5pro/GT-Neo-3T AndroidS)
         if (aw8697->microsecond > 6000000)
         {
             pr_info("%s vincent time out aw8697->rtp_cnt %d osc_int_state %02x\n", __func__,aw8697->rtp_cnt, osc_int_state);
@@ -6379,17 +5958,12 @@ static int aw8697_rtp_osc_calibration(struct aw8697 *aw8697)
     //ENABLE IRQ
     aw8697_pm_qos_enable(aw8697, false);
     aw8697->osc_cali_flag =0;
-<<<<<<< HEAD
 #ifdef KERNEL_VERSION_49
     aw8697->microsecond = (aw8697->end.tv_sec - aw8697->start.tv_sec)*1000000 +
         (aw8697->end.tv_usec - aw8697->start.tv_usec);
 #else
 	aw8697->microsecond = ktime_to_us(ktime_sub(aw8697->kend, aw8697->kstart));
 #endif
-=======
-    aw8697->microsecond = (aw8697->end.tv_sec - aw8697->start.tv_sec)*1000000 +
-        (aw8697->end.tv_usec - aw8697->start.tv_usec);
->>>>>>> 30d479c5d077 (drivers: misc: Import aw8697 haptic drivers from realme Q5pro/GT-Neo-3T AndroidS)
     /*calibration osc*/
     printk("%s 2018_microsecond:%ld \n",__func__,aw8697->microsecond);
 
@@ -6448,7 +6022,6 @@ const struct firmware *aw8697_old_work_file_load_accord_f0(struct aw8697 *aw8697
                 f0_file_num = 9;
             else
                 f0_file_num = 10;
-<<<<<<< HEAD
 		} else if (aw8697->device_id == 81538) {
 			if (aw8697->f0 <= 1450) {
 				f0_file_num = 0;
@@ -6473,8 +6046,6 @@ const struct firmware *aw8697_old_work_file_load_accord_f0(struct aw8697 *aw8697
 			} else {
 				f0_file_num = 10;
 			}
-=======
->>>>>>> 30d479c5d077 (drivers: misc: Import aw8697 haptic drivers from realme Q5pro/GT-Neo-3T AndroidS)
         } else if(aw8697->device_id == 832 || aw8697->device_id == 833){
             if(aw8697->f0 <= 2255)
                 f0_file_num = 0;
@@ -6504,13 +6075,10 @@ const struct firmware *aw8697_old_work_file_load_accord_f0(struct aw8697 *aw8697
 			ret = request_firmware(&rtp_file,
 					aw8697_old_steady_test_rtp_name_0815[f0_file_num],
 					aw8697->dev);
-<<<<<<< HEAD
 		} else if (aw8697->device_id == 81538) {
 			ret = request_firmware(&rtp_file,
 					aw8697_old_steady_test_rtp_name_081538[f0_file_num],
 					aw8697->dev);
-=======
->>>>>>> 30d479c5d077 (drivers: misc: Import aw8697 haptic drivers from realme Q5pro/GT-Neo-3T AndroidS)
 #ifdef CONFIG_OPLUS_HAPTIC_OOS
 		} else if (aw8697->device_id == 1815) {
 			ret = request_firmware(&rtp_file,
@@ -6531,13 +6099,10 @@ const struct firmware *aw8697_old_work_file_load_accord_f0(struct aw8697 *aw8697
                 ret = request_firmware(&rtp_file,
                         aw8697_high_temp_high_humidity_0815[f0_file_num],
                         aw8697->dev);
-<<<<<<< HEAD
 			} else if (aw8697->device_id == 81538) {
 				ret = request_firmware(&rtp_file,
 						aw8697_high_temp_high_humidity_081538[f0_file_num],
 						aw8697->dev);
-=======
->>>>>>> 30d479c5d077 (drivers: misc: Import aw8697 haptic drivers from realme Q5pro/GT-Neo-3T AndroidS)
 #ifdef CONFIG_OPLUS_HAPTIC_OOS
 		} else if (aw8697->device_id == 1815) {
                 ret = request_firmware(&rtp_file,
@@ -6581,10 +6146,7 @@ const struct firmware *aw8697_rtp_load_file_accord_f0(struct aw8697 *aw8697)
 
     if ((aw8697->rtp_file_num >=  RINGTONES_START_INDEX && aw8697->rtp_file_num <= RINGTONES_END_INDEX)
         || (aw8697->rtp_file_num >=  NEW_RING_START && aw8697->rtp_file_num <= NEW_RING_END)
-<<<<<<< HEAD
 		|| (aw8697->rtp_file_num >=  OS12_NEW_RING_START && aw8697->rtp_file_num <= OS12_NEW_RING_END)
-=======
->>>>>>> 30d479c5d077 (drivers: misc: Import aw8697 haptic drivers from realme Q5pro/GT-Neo-3T AndroidS)
         || aw8697->rtp_file_num == RINGTONES_SIMPLE_INDEX
         || aw8697->rtp_file_num == RINGTONES_PURE_INDEX)
     {
@@ -6642,7 +6204,6 @@ const struct firmware *aw8697_rtp_load_file_accord_f0(struct aw8697 *aw8697)
 }
 
 #ifdef CONFIG_OPLUS_HAPTIC_OOS
-<<<<<<< HEAD
 unsigned char *one_sine_data;
 unsigned int rtp_500ms_first_sine_place;
 unsigned int one_sine_data_length;
@@ -6652,13 +6213,6 @@ unsigned int one_sine_data_time;
 #define ONE_SINE_DATA_LENGTH_1815		141
 #define ONE_SINE_DATA_TIME_1815			588
 static unsigned char one_sine_data_1815[] =  {
-=======
-#ifndef CONFIG_ARCH_LITO
-#define RTP_500MS_FIRST_SINE_PLACE	141
-#define ONE_SINE_DATA_LENGHT		141
-#define ONE_SINE_DATA_TIME		588
-unsigned char one_sine_data[] =  {
->>>>>>> 30d479c5d077 (drivers: misc: Import aw8697 haptic drivers from realme Q5pro/GT-Neo-3T AndroidS)
 	0x00, 0x00, 0x01, 0x02, 0x03, 0x04, 0x05, 0x06, 0x07, 0x07, 0x08, 0x09, 0x0a, 0x0b, 0x0b, 0x0c,
 	0x0d, 0x0d, 0x0e, 0x0f, 0x0f, 0x10, 0x10, 0x11, 0x11, 0x12, 0x12, 0x12, 0x13, 0x13, 0x13, 0x13,
 	0x14, 0x14, 0x14, 0x14, 0x14, 0x14, 0x14, 0x14, 0x13, 0x13, 0x13, 0x13, 0x12, 0x12, 0x12, 0x11,
@@ -6669,7 +6223,6 @@ unsigned char one_sine_data[] =  {
 	0xed, 0xed, 0xed, 0xee, 0xee, 0xef, 0xef, 0xf0, 0xf0, 0xf1, 0xf1, 0xf2, 0xf2, 0xf3, 0xf4, 0xf4,
 	0xf5, 0xf6, 0xf7, 0xf8, 0xf8, 0xf9, 0xfa, 0xfb, 0xfc, 0xfd, 0xfe, 0xff, 0xff,
 };
-<<<<<<< HEAD
 
 #define RTP_500MS_FIRST_SINE_PLACE_0832         102
 #define ONE_SINE_DATA_LENGTH_0832               102
@@ -6679,22 +6232,10 @@ static unsigned char one_sine_data_0832[] =  {
 	0x1d, 0x1e, 0x1f, 0x20, 0x21, 0x22, 0x22, 0x23, 0x23, 0x23, 0x23, 0x23, 0x23, 0x23, 0x22, 0x21,
 	0x21, 0x20, 0x1f, 0x1e, 0x1c, 0x1b, 0x19, 0x18, 0x16, 0x15, 0x13, 0x11, 0x0f, 0x0d, 0x0b, 0x09,
 	0x06, 0x04, 0x02, 0x00, 0xff, 0xfd, 0xfa, 0xf8, 0xf6, 0xf4, 0xf2, 0xf0, 0xee, 0xec, 0xea, 0xe9,
-=======
-#else /* CONFIG_ARCH_LITO */
-#define RTP_500MS_FIRST_SINE_PLACE	102
-#define ONE_SINE_DATA_LENGHT		102
-#define ONE_SINE_DATA_TIME		425
-unsigned char one_sine_data[] =  {
-	0x00, 0x01, 0x04, 0x06, 0x08, 0x0a, 0x0c, 0x0e, 0x10, 0x12, 0x14, 0x16, 0x17, 0x19, 0x1a, 0x1c,
-	0x1d, 0x1e, 0x1f, 0x20, 0x21, 0x22, 0x22, 0x23, 0x23, 0x23, 0x23, 0x23, 0x23, 0x23, 0x22, 0x21,
-	0x21, 0x20, 0x1f, 0x1e, 0x1c, 0x1b, 0x19, 0x18, 0x16, 0x15, 0x13, 0x11, 0x0f, 0x0d, 0x0b, 0x09,
-	0x06, 0x04, 0x02, 0x00, 0xff, 0xfd, 0xfa, 0xf8, 0xf6, 0xf4, 0xf2, 0xf0,	0xee, 0xec, 0xea, 0xe9,
->>>>>>> 30d479c5d077 (drivers: misc: Import aw8697 haptic drivers from realme Q5pro/GT-Neo-3T AndroidS)
 	0xe7, 0xe6, 0xe4, 0xe3, 0xe2, 0xe1, 0xe0, 0xdf, 0xde, 0xde, 0xdd, 0xdd, 0xdd, 0xdd, 0xdd, 0xdd,
 	0xdd, 0xde, 0xdf, 0xdf, 0xe0, 0xe1, 0xe2, 0xe4, 0xe5, 0xe6, 0xe8, 0xea, 0xeb, 0xed, 0xef, 0xf1,
 	0xf3, 0xf5, 0xf7, 0xf9, 0xfc, 0xfe,
 };
-<<<<<<< HEAD
 
 #define RTP_500MS_FIRST_SINE_PLACE_0619         141
 #define ONE_SINE_DATA_LENGTH_0619               141
@@ -6731,14 +6272,6 @@ static void aw8697_update_sin_rtp_data(struct aw8697 *aw8697)
 {
 	aw8697->sin_num = ((aw8697->duration - 500) * 100 / one_sine_data_time) + 1;
 	aw8697->sin_data_lenght = (size_t)(aw8697->sin_num * one_sine_data_length);
-=======
-#endif /* CONFIG_ARCH_LITO */
-
-static void aw8697_update_sin_rtp_data(struct aw8697 *aw8697)
-{
-	aw8697->sin_num = ((aw8697->duration - 500) * 100 / ONE_SINE_DATA_TIME) + 1;
-	aw8697->sin_data_lenght = (size_t)(aw8697->sin_num * ONE_SINE_DATA_LENGHT);
->>>>>>> 30d479c5d077 (drivers: misc: Import aw8697 haptic drivers from realme Q5pro/GT-Neo-3T AndroidS)
 }
 
 static void aw8697_update_rtp_data(struct aw8697 *aw8697, const struct firmware *rtp_file)
@@ -6754,7 +6287,6 @@ static void aw8697_update_rtp_data(struct aw8697 *aw8697, const struct firmware 
 	}
 	memset(temp_rtp_data, 0x00, aw8697_rtp->len);
 
-<<<<<<< HEAD
 	memcpy(temp_rtp_data, rtp_file->data, rtp_500ms_first_sine_place);
 	data_location += rtp_500ms_first_sine_place;
 
@@ -6764,17 +6296,6 @@ static void aw8697_update_rtp_data(struct aw8697 *aw8697, const struct firmware 
 	}
 
 	memcpy(temp_rtp_data + data_location, rtp_file->data + rtp_500ms_first_sine_place, rtp_file->size-rtp_500ms_first_sine_place);
-=======
-	memcpy(temp_rtp_data, rtp_file->data, RTP_500MS_FIRST_SINE_PLACE);
-	data_location += RTP_500MS_FIRST_SINE_PLACE;
-
-	for (i = 1; i <= aw8697->sin_num; i++) {
-		memcpy(temp_rtp_data + data_location, one_sine_data, ONE_SINE_DATA_LENGHT);
-		data_location += ONE_SINE_DATA_LENGHT;
-	}
-
-	memcpy(temp_rtp_data + data_location, rtp_file->data + RTP_500MS_FIRST_SINE_PLACE, rtp_file->size-RTP_500MS_FIRST_SINE_PLACE);
->>>>>>> 30d479c5d077 (drivers: misc: Import aw8697 haptic drivers from realme Q5pro/GT-Neo-3T AndroidS)
 
 	memcpy(aw8697_rtp->data, temp_rtp_data, aw8697_rtp->len);
 
@@ -6815,7 +6336,6 @@ static void aw8697_rtp_work_routine(struct work_struct *work)
                 aw8697_rtp_name_175Hz[aw8697->rtp_file_num],
                 aw8697->dev);
             }
-<<<<<<< HEAD
 		} else if (aw8697->device_id == 81538) {
 			if (aw8697->f0 <= 1470) {
 				ret = request_firmware(&rtp_file,
@@ -6830,8 +6350,6 @@ static void aw8697_rtp_work_routine(struct work_struct *work)
 				aw8697_rtp_name_155Hz[aw8697->rtp_file_num],
 				aw8697->dev);
 			}
-=======
->>>>>>> 30d479c5d077 (drivers: misc: Import aw8697 haptic drivers from realme Q5pro/GT-Neo-3T AndroidS)
 #ifdef CONFIG_OPLUS_HAPTIC_OOS
 	} else if (aw8697->device_id == 1815) {
                 ret = request_firmware(&rtp_file,
@@ -6843,7 +6361,6 @@ static void aw8697_rtp_work_routine(struct work_struct *work)
                 aw8697_rtp_name_9595_170Hz[aw8697->rtp_file_num],
                 aw8697->dev);
         } else if (aw8697->device_id == 619) {
-<<<<<<< HEAD
 #ifdef CONFIG_OPLUS_HAPTIC_OOS
 		if (aw8697->f0 <= 1680) {
 			ret = request_firmware(&rtp_file,
@@ -6863,11 +6380,6 @@ static void aw8697_rtp_work_routine(struct work_struct *work)
                 aw8697_rtp_name[aw8697->rtp_file_num],
                 aw8697->dev);
 #endif
-=======
-                ret = request_firmware(&rtp_file,
-                aw8697_rtp_name[aw8697->rtp_file_num],
-                aw8697->dev);
->>>>>>> 30d479c5d077 (drivers: misc: Import aw8697 haptic drivers from realme Q5pro/GT-Neo-3T AndroidS)
         } else if (aw8697->device_id == 1040) {
                 ret = request_firmware(&rtp_file,
                 aw8697_rtp_name[aw8697->rtp_file_num],
@@ -6999,18 +6511,14 @@ static void aw8697_rtp_work_routine(struct work_struct *work)
 	if (aw8697->device_id == 815) {
 		pr_info("%s: rtp file [%s] size = %d, f0 = %d\n", __func__,
 		aw8697_rtp_name[aw8697->rtp_file_num], aw8697_rtp->len, aw8697->f0);
-<<<<<<< HEAD
 	} else if (aw8697->device_id == 81538) {
 		pr_info("%s: rtp file [%s] size = %d, f0 = %d\n", __func__,
 		aw8697_rtp_name_150Hz[aw8697->rtp_file_num], aw8697_rtp->len, aw8697->f0);
-=======
->>>>>>> 30d479c5d077 (drivers: misc: Import aw8697 haptic drivers from realme Q5pro/GT-Neo-3T AndroidS)
 #ifdef CONFIG_OPLUS_HAPTIC_OOS
 	} else if (aw8697->device_id == 1815) {
         pr_info("%s: rtp file [%s] size = %d, f0 = %d\n", __func__,
             aw8697_rtp_name_1815_170Hz[aw8697->rtp_file_num], aw8697_rtp->len, aw8697->f0);
 #endif
-<<<<<<< HEAD
 	} else if (aw8697->device_id == 619) {
 #ifdef CONFIG_OPLUS_HAPTIC_OOS
 		if (aw8697->f0 <= 1680) {
@@ -7028,19 +6536,12 @@ static void aw8697_rtp_work_routine(struct work_struct *work)
 		aw8697_rtp_name[aw8697->rtp_file_num], aw8697_rtp->len, aw8697->f0);
 #endif
 	} else if (aw8697->device_id == 1040) {
-=======
-        } else if (aw8697->device_id == 619) {
-                pr_info("%s: rtp file [%s] size = %d, f0 = %d\n", __func__,
-                aw8697_rtp_name[aw8697->rtp_file_num], aw8697_rtp->len, aw8697->f0);
-        } else if (aw8697->device_id == 1040) {
->>>>>>> 30d479c5d077 (drivers: misc: Import aw8697 haptic drivers from realme Q5pro/GT-Neo-3T AndroidS)
                 pr_info("%s: rtp file [%s] size = %d, f0 = %d\n", __func__,
                 aw8697_rtp_name[aw8697->rtp_file_num], aw8697_rtp->len, aw8697->f0);
 	} else if (aw8697->device_id == 9595) {
 		pr_info("%s: rtp file [%s] size = %d, f0 = %d\n", __func__,
 		aw8697_rtp_name_9595_170Hz[aw8697->rtp_file_num], aw8697_rtp->len, aw8697->f0);
 	} else {
-<<<<<<< HEAD
 #ifdef CONFIG_OPLUS_HAPTIC_OOS
 		pr_info("%s: rtp file [%s] size = %d, f0 = %d\n", __func__,
 		aw8697_rtp_name_0832_234Hz[aw8697->rtp_file_num], aw8697_rtp->len, aw8697->f0);
@@ -7048,10 +6549,6 @@ static void aw8697_rtp_work_routine(struct work_struct *work)
 		pr_info("%s: rtp file [%s] size = %d, f0 = %d\n", __func__,
 		aw8697_rtp_name_0832_230Hz[aw8697->rtp_file_num], aw8697_rtp->len, aw8697->f0);
 #endif
-=======
-		pr_info("%s: rtp file [%s] size = %d, f0 = %d\n", __func__,
-		aw8697_rtp_name_0832_230Hz[aw8697->rtp_file_num], aw8697_rtp->len, aw8697->f0);
->>>>>>> 30d479c5d077 (drivers: misc: Import aw8697 haptic drivers from realme Q5pro/GT-Neo-3T AndroidS)
 	}
 
 
@@ -7687,11 +7184,7 @@ static int aw8697_haptic_cont(struct aw8697 *aw8697)
 
     /* preset f0 */
     aw8697->f0_pre = aw8697->f0;
-<<<<<<< HEAD
     aw8697_haptic_set_f0_preset(aw8697);
-=======
-	aw8697_haptic_set_f0_preset(aw8697, aw8697->f0_pre);
->>>>>>> 30d479c5d077 (drivers: misc: Import aw8697 haptic drivers from realme Q5pro/GT-Neo-3T AndroidS)
 
     /* lpf */
     aw8697_i2c_write_bits(aw8697, AW8697_REG_DATCTRL,
@@ -7809,11 +7302,7 @@ static int aw8697_dump_f0_registers(struct aw8697 *aw8697)
  * haptic f0 cali
  *
  *****************************************************/
-<<<<<<< HEAD
 static int aw8697_haptic_get_f0(struct aw8697 *aw8697)
-=======
-static int aw8697_haptic_get_f0(struct aw8697 *aw8697, unsigned int f0_pre)
->>>>>>> 30d479c5d077 (drivers: misc: Import aw8697 haptic drivers from realme Q5pro/GT-Neo-3T AndroidS)
 {
     int ret = 0;
     unsigned char i = 0;
@@ -7856,11 +7345,7 @@ static int aw8697_haptic_get_f0(struct aw8697 *aw8697, unsigned int f0_pre)
     }
 
     /* preset f0 */
-<<<<<<< HEAD
     aw8697_haptic_set_f0_preset(aw8697);
-=======
-	aw8697_haptic_set_f0_preset(aw8697, f0_pre);
->>>>>>> 30d479c5d077 (drivers: misc: Import aw8697 haptic drivers from realme Q5pro/GT-Neo-3T AndroidS)
 
     /* beme config */
     aw8697_i2c_write(aw8697, AW8697_REG_BEMF_VTHH_H, 0x10);
@@ -7888,11 +7373,7 @@ static int aw8697_haptic_get_f0(struct aw8697 *aw8697, unsigned int f0_pre)
     aw8697_haptic_play_go(aw8697, true);
 
     /* f0 trace time */
-<<<<<<< HEAD
     t_f0_ms = 1000*10/aw8697->f0_pre;
-=======
-	t_f0_ms = 1000*10/ f0_pre;
->>>>>>> 30d479c5d077 (drivers: misc: Import aw8697 haptic drivers from realme Q5pro/GT-Neo-3T AndroidS)
     t_f0_trace_ms = t_f0_ms * (f0_pre_num + f0_wait_num + (f0_trace_num+f0_wait_num)*(f0_repeat_num-1));
     msleep(t_f0_trace_ms);
 
@@ -7930,29 +7411,6 @@ static int aw8697_haptic_get_f0(struct aw8697 *aw8697, unsigned int f0_pre)
     return ret;
 }
 
-<<<<<<< HEAD
-=======
-static int aw8697_haptic_multiple_get_f0(struct aw8697 *aw8697)
-{
-	int ret = 0;
-	ret = aw8697_haptic_get_f0(aw8697, aw8697->f0_pre);
-	if (ret) {
-        pr_err("%s : first get f0 failed, ret = %d\n", __func__, ret);
-        return -ERANGE;
-	}
-	pr_err("%s : first get f0 = %d\n", __func__, aw8697->f0);
-
-	ret = aw8697_haptic_get_f0(aw8697, aw8697->f0);
-	if (ret) {
-        pr_err("%s : second get f0 failed, ret = %d\n", __func__, ret);
-        return -ERANGE;
-	}
-	pr_err("%s : second get f0 = %d\n", __func__, aw8697->f0);
-
-	return 0;
-}
-
->>>>>>> 30d479c5d077 (drivers: misc: Import aw8697 haptic drivers from realme Q5pro/GT-Neo-3T AndroidS)
 static int aw8697_haptic_f0_calibration(struct aw8697 *aw8697)
 {
     int ret = 0;
@@ -7968,11 +7426,7 @@ static int aw8697_haptic_f0_calibration(struct aw8697 *aw8697)
 
     aw8697->f0_cali_flag = AW8697_HAPTIC_CALI_F0;
     aw8697_i2c_write(aw8697, AW8697_REG_TRIM_LRA, 0);
-<<<<<<< HEAD
     if(aw8697_haptic_get_f0(aw8697)) {
-=======
-	if (aw8697_haptic_multiple_get_f0(aw8697)) {
->>>>>>> 30d479c5d077 (drivers: misc: Import aw8697 haptic drivers from realme Q5pro/GT-Neo-3T AndroidS)
         pr_err("%s get f0 error, user defafult f0\n", __func__);
     } else {
         /* max and min limit */
@@ -7987,7 +7441,6 @@ static int aw8697_haptic_f0_calibration(struct aw8697 *aw8697)
             if(aw8697->f0*100 > AW8697_0832_HAPTIC_F0_PRE*(100+AW8697_0832_HAPTIC_F0_CALI_PERCEN)) {
                 f0_limit = AW8697_0832_HAPTIC_F0_PRE*(100+AW8697_0832_HAPTIC_F0_CALI_PERCEN)/100;
             }
-<<<<<<< HEAD
 		} else if (aw8697->device_id == 81538) {
 			if(aw8697->f0*100 < AW8697_081538_HAPTIC_F0_PRE*(100-AW8697_081538_HAPTIC_F0_CALI_PERCEN)) {
 				f0_limit = AW8697_081538_HAPTIC_F0_PRE*(100-AW8697_081538_HAPTIC_F0_CALI_PERCEN)/100;
@@ -7995,8 +7448,6 @@ static int aw8697_haptic_f0_calibration(struct aw8697 *aw8697)
 			if(aw8697->f0*100 > AW8697_081538_HAPTIC_F0_PRE*(100+AW8697_081538_HAPTIC_F0_CALI_PERCEN)) {
 				f0_limit = AW8697_081538_HAPTIC_F0_PRE*(100+AW8697_081538_HAPTIC_F0_CALI_PERCEN)/100;
 			}
-=======
->>>>>>> 30d479c5d077 (drivers: misc: Import aw8697 haptic drivers from realme Q5pro/GT-Neo-3T AndroidS)
         } else {
             if(aw8697->f0*100 < AW8697_0815_HAPTIC_F0_PRE*(100-AW8697_0815_HAPTIC_F0_CALI_PERCEN)) {
                 f0_limit = AW8697_0815_HAPTIC_F0_PRE*(100-AW8697_0815_HAPTIC_F0_CALI_PERCEN)/100;
@@ -8068,11 +7519,7 @@ static int aw8697_haptic_f0_calibration(struct aw8697 *aw8697)
 		pr_debug("%s f0_cali_lra=%d\n", __func__, f0_cali_lra);
 
 		/* get cali step complement code*/
-<<<<<<< HEAD
 		if (f0_cali_step < 0) {
-=======
-		if (f0_cali_lra < 0) {
->>>>>>> 30d479c5d077 (drivers: misc: Import aw8697 haptic drivers from realme Q5pro/GT-Neo-3T AndroidS)
 			f0_cali_lra += 0x40;
 		}
 		pr_debug("%s reg f0_cali_lra=%d\n", __func__, f0_cali_lra);
@@ -8085,17 +7532,9 @@ static int aw8697_haptic_f0_calibration(struct aw8697 *aw8697)
         pr_info("%s final trim_lra=0x%02x\n", __func__, reg_val);
     }
 
-<<<<<<< HEAD
     if(aw8697_haptic_get_f0(aw8697)) {
         pr_err("%s get f0 error, user defafult f0\n", __func__);
     }
-=======
-/*
-    if(aw8697_haptic_get_f0(aw8697)) {
-        pr_err("%s get f0 error, user defafult f0\n", __func__);
-    }
-*/
->>>>>>> 30d479c5d077 (drivers: misc: Import aw8697 haptic drivers from realme Q5pro/GT-Neo-3T AndroidS)
 
     /* restore default work mode */
     aw8697_haptic_play_mode(aw8697, AW8697_HAPTIC_STANDBY_MODE);
@@ -8233,12 +7672,8 @@ static long aw8697_file_unlocked_ioctl(struct file *file, unsigned int cmd, unsi
                 ret = -EINVAL;
                 break;
             }
-<<<<<<< HEAD
 			aw8697_haptic_set_bst_vol(aw8697, 0x11);
 			aw8697_set_clock(aw8697, AW8697_HAPTIC_CLOCK_CALI_OSC_STANDARD);
-=======
-		aw8697_haptic_set_bst_vol(aw8697, 0x11);
->>>>>>> 30d479c5d077 (drivers: misc: Import aw8697 haptic drivers from realme Q5pro/GT-Neo-3T AndroidS)
             aw8697_haptic_play_mode(aw8697, AW8697_HAPTIC_RTP_MODE);
             aw8697_haptic_start(aw8697);
             usleep_range(2000, 2500);
@@ -8262,12 +7697,8 @@ static long aw8697_file_unlocked_ioctl(struct file *file, unsigned int cmd, unsi
             aw8697_haptic_stop(aw8697);
             aw8697->done_flag = false;
             aw8697->haptic_rtp_mode = true;
-<<<<<<< HEAD
 			aw8697_haptic_set_bst_vol(aw8697, 0x11);
 			aw8697_set_clock(aw8697, AW8697_HAPTIC_CLOCK_CALI_OSC_STANDARD);
-=======
-		aw8697_haptic_set_bst_vol(aw8697, 0x11);
->>>>>>> 30d479c5d077 (drivers: misc: Import aw8697 haptic drivers from realme Q5pro/GT-Neo-3T AndroidS)
             schedule_work(&aw8697->haptic_rtp_work);
 			/*queue_work(aw8697->work_queue, &aw8697->haptic_rtp_work);*/
             break;
@@ -8370,7 +7801,6 @@ static ssize_t proc_vibration_style_write(struct file *filp, const char __user *
 				      size_t count, loff_t *lo)
 {
 	struct aw8697 *aw8697 = (struct aw8697 *)filp->private_data;
-<<<<<<< HEAD
 	char *buffer = NULL;
 	int val;
 	int rc = 0;
@@ -8395,22 +7825,6 @@ static ssize_t proc_vibration_style_write(struct file *filp, const char __user *
 		kfree(buffer);
 		return count;
 	}
-=======
-	char buffer[5] = { 0 };
-	int val;
-
-	if (count > 5) {
-		return -EFAULT;
-	}
-
-	if (copy_from_user(buffer, buf, count)) {
-		dev_err(aw8697->dev, "%s: error.\n", __func__);
-		return -EFAULT;
-	}
-
-	dev_err(aw8697->dev, "buffer=%s", buffer);
-	kstrtoint(buffer, 0, &val);
->>>>>>> 30d479c5d077 (drivers: misc: Import aw8697 haptic drivers from realme Q5pro/GT-Neo-3T AndroidS)
 	dev_err(aw8697->dev, "val = %d", val);
 
 	if (val == 0) {
@@ -8422,10 +7836,7 @@ static ssize_t proc_vibration_style_write(struct file *filp, const char __user *
 	} else {
 		aw8697->vibration_style = AW8697_HAPTIC_VIBRATION_CRISP_STYLE;
 	}
-<<<<<<< HEAD
 	kfree(buffer);
-=======
->>>>>>> 30d479c5d077 (drivers: misc: Import aw8697 haptic drivers from realme Q5pro/GT-Neo-3T AndroidS)
 	return count;
 }
 
@@ -8602,20 +8013,13 @@ static int aw8697_haptic_init(struct aw8697 *aw8697)
 	aw8697->rtp_routine_on = 0; /*default rtp on is init to 0*/
     aw8697_op_clean_status(aw8697);
      mutex_init(&aw8697->rtp_lock);
-<<<<<<< HEAD
 	mutex_init(&aw8697->qos_lock);
-=======
-     //vincent
->>>>>>> 30d479c5d077 (drivers: misc: Import aw8697 haptic drivers from realme Q5pro/GT-Neo-3T AndroidS)
     /* haptic init */
     mutex_lock(&aw8697->lock);
 
     aw8697->activate_mode = AW8697_HAPTIC_ACTIVATE_CONT_MODE;
 	aw8697->vibration_style = AW8697_HAPTIC_VIBRATION_CRISP_STYLE;
-<<<<<<< HEAD
     aw8697->level = 3;
-=======
->>>>>>> 30d479c5d077 (drivers: misc: Import aw8697 haptic drivers from realme Q5pro/GT-Neo-3T AndroidS)
 
     ret = aw8697_i2c_read(aw8697, AW8697_REG_WAVSEQ1, &reg_val);
     aw8697->index = reg_val & 0x7F;
@@ -8674,7 +8078,6 @@ static int aw8697_haptic_init(struct aw8697 *aw8697)
         aw8697->cont_td = AW8697_0832_HAPTIC_CONT_TD;
         aw8697->cont_zc_thr = AW8697_0832_HAPTIC_CONT_ZC_THR;
         aw8697->cont_num_brk = AW8697_0832_HAPTIC_CONT_NUM_BRK;
-<<<<<<< HEAD
 	} else if (aw8697->device_id == 81538) {
 		aw8697->f0_pre = AW8697_081538_HAPTIC_F0_PRE;
 		aw8697->cont_drv_lvl = AW8697_081538_HAPTIC_CONT_DRV_LVL;
@@ -8682,8 +8085,6 @@ static int aw8697_haptic_init(struct aw8697 *aw8697)
 		aw8697->cont_td = AW8697_081538_HAPTIC_CONT_TD;
 		aw8697->cont_zc_thr = AW8697_081538_HAPTIC_CONT_ZC_THR;
 		aw8697->cont_num_brk = AW8697_081538_HAPTIC_CONT_NUM_BRK;
-=======
->>>>>>> 30d479c5d077 (drivers: misc: Import aw8697 haptic drivers from realme Q5pro/GT-Neo-3T AndroidS)
     } else {
         aw8697->f0_pre = AW8697_0815_HAPTIC_F0_PRE;
         aw8697->cont_drv_lvl = AW8697_0815_HAPTIC_CONT_DRV_LVL;
@@ -8937,15 +8338,6 @@ static ssize_t aw8697_activate_store(struct device *dev,
         return count;
 
     pr_err("%s: value=%d\n", __FUNCTION__, val);
-<<<<<<< HEAD
-=======
-    //vincent
-    if (0 == val)
-    {
-        mdelay(10);
-    }
-    //vincent
->>>>>>> 30d479c5d077 (drivers: misc: Import aw8697 haptic drivers from realme Q5pro/GT-Neo-3T AndroidS)
 #ifndef CONFIG_OPLUS_HAPTIC_OOS
     hrtimer_cancel(&aw8697->timer);
 #endif
@@ -8999,13 +8391,10 @@ static ssize_t aw8697_activate_store(struct device *dev,
 		rtp_max_num = sizeof(aw8697_rtp_name_1815_170Hz) / AW8697_RTP_NAME_MAX;
 	} else if (aw8697->device_id == 832) {
 		rtp_max_num = sizeof(aw8697_rtp_name_0832_234Hz) / AW8697_RTP_NAME_MAX;
-<<<<<<< HEAD
 #ifdef CONFIG_OPLUS_HAPTIC_OOS
 	} else if (aw8697->device_id == 619) {
 		rtp_max_num = sizeof(aw8697_rtp_name_0619_170Hz) / AW8697_RTP_NAME_MAX;
 #endif /* CONFIG_OPLUS_HAPTIC_OOS */
-=======
->>>>>>> 30d479c5d077 (drivers: misc: Import aw8697 haptic drivers from realme Q5pro/GT-Neo-3T AndroidS)
 	} else {
 		rtp_max_num = sizeof(aw8697_rtp_name) / AW8697_RTP_NAME_MAX;
 	}
@@ -9153,7 +8542,6 @@ struct aw8697_vmax_map {
 };
 #ifdef CONFIG_OPLUS_HAPTIC_OOS
 static struct aw8697_vmax_map vmax_map[] = {
-<<<<<<< HEAD
 	{800,  0x00, 0x40},
 	{900,  0x00, 0x49},
 	{1000, 0x00, 0x51},
@@ -9174,25 +8562,6 @@ static struct aw8697_vmax_map vmax_map[] = {
 	{2700, 0x20, 0x80},
 	{3000, 0x22, 0x80},
 	{3300, 0x28, 0x80},
-=======
-	{800,  0x00, 0x30},
-	{900,  0x00, 0x36},
-	{1000, 0x00, 0x42},
-	{1100, 0x00, 0x48},
-	{1200, 0x00, 0x54},
-	{1300, 0x00, 0x60},
-	{1400, 0x00, 0x64},
-	{1500, 0x00, 0x70},
-	{1600, 0x00, 0x75},
-	{1700, 0x02, 0x75},
-	{1800, 0x04, 0x75},
-	{1900, 0x06, 0x75},
-	{2000, 0x08, 0x75},
-	{2100, 0x10, 0x75},
-	{2200, 0x12, 0x75},
-	{2300, 0x14, 0x75},
-	{2400, 0x16, 0x75},
->>>>>>> 30d479c5d077 (drivers: misc: Import aw8697 haptic drivers from realme Q5pro/GT-Neo-3T AndroidS)
 };
 #else
 static struct aw8697_vmax_map vmax_map[] = {
@@ -9209,7 +8578,6 @@ static struct aw8697_vmax_map vmax_map[] = {
 	{1800, 0x07, 0x80},
 	{1900, 0x0A, 0x80},
 	{2000, 0x0D, 0x80},
-<<<<<<< HEAD
 	{2100, 0x12, 0x80},
 	{2200, 0x14, 0x80},
 	{2300, 0x16, 0x80},
@@ -9217,12 +8585,6 @@ static struct aw8697_vmax_map vmax_map[] = {
 	{2700, 0x20, 0x80},
 	{3000, 0x22, 0x80},
 	{3300, 0x28, 0x80},
-=======
-	{2100, 0x10, 0x80},
-	{2200, 0x12, 0x80},
-	{2300, 0x15, 0x80},
-	{2400, 0x18, 0x80},
->>>>>>> 30d479c5d077 (drivers: misc: Import aw8697 haptic drivers from realme Q5pro/GT-Neo-3T AndroidS)
 };
 #endif
 
@@ -9242,12 +8604,9 @@ int aw8697_convert_level_to_vmax(struct aw8697 *aw8697, int val)
 		aw8697->gain = vmax_map[i - 1].gain;
 	}
 
-<<<<<<< HEAD
 	if (aw8697->vmax > AW8697_HAPTIC_HIGH_LEVEL_REG_VAL)
 		aw8697->vmax = AW8697_HAPTIC_HIGH_LEVEL_REG_VAL;
 
-=======
->>>>>>> 30d479c5d077 (drivers: misc: Import aw8697 haptic drivers from realme Q5pro/GT-Neo-3T AndroidS)
 	return i;
 }
 
@@ -9274,11 +8633,7 @@ static ssize_t aw8697_vmax_store(struct device *dev,
 #ifdef OPLUS_FEATURE_CHG_BASIC
     if (val <= 255) {
         aw8697->gain = (val * AW8697_HAPTIC_RAM_VBAT_COMP_GAIN) / 255;
-<<<<<<< HEAD
 	} else if (val <= 3600) {
-=======
-	} else if (val <= 2400) {
->>>>>>> 30d479c5d077 (drivers: misc: Import aw8697 haptic drivers from realme Q5pro/GT-Neo-3T AndroidS)
         aw8697_convert_level_to_vmax(aw8697, val);
     } else {
         aw8697->vmax = AW8697_HAPTIC_HIGH_LEVEL_REG_VAL;
@@ -9289,25 +8644,6 @@ static ssize_t aw8697_vmax_store(struct device *dev,
         aw8697->gain = AW8697_HAPTIC_RAM_VBAT_COMP_GAIN;
     }
 
-<<<<<<< HEAD
-=======
-#ifdef CONFIG_OPLUS_HAPTIC_OOS
-	if (val == 100 || val == 101 || val == 102 || val == 105) {
-		aw8697->vmax = 0x16;
-		aw8697->gain = 0x50;
-	} else if (val == 103 || val == 106) {
-		aw8697->vmax = 0x16;
-		aw8697->gain = 0x60;
-	} else if (val == 104 || val == 107) {
-		aw8697->vmax = 0x16;
-		aw8697->gain = 0x70;
-	} else if (val == 108 || val == 109) {
-		aw8697->vmax = 0x16;
-		aw8697->gain = 0x80;
-	}
-#endif
-
->>>>>>> 30d479c5d077 (drivers: misc: Import aw8697 haptic drivers from realme Q5pro/GT-Neo-3T AndroidS)
     aw8697_haptic_set_gain(aw8697, aw8697->gain);
     aw8697_haptic_set_bst_vol(aw8697, aw8697->vmax);
 #else
@@ -9359,7 +8695,6 @@ static ssize_t aw8697_gain_store(struct device *dev,
     return count;
 }
 
-<<<<<<< HEAD
 static ssize_t aw8697_level_show(struct device *dev,
         struct device_attribute *attr, char *buf)
 {
@@ -9402,8 +8737,6 @@ static ssize_t aw8697_level_store(struct device *dev,
     return count;
 }
 
-=======
->>>>>>> 30d479c5d077 (drivers: misc: Import aw8697 haptic drivers from realme Q5pro/GT-Neo-3T AndroidS)
 static ssize_t aw8697_seq_show(struct device *dev,
         struct device_attribute *attr, char *buf)
 {
@@ -9683,10 +9016,7 @@ static ssize_t aw8697_rtp_store(struct device *dev, struct device_attribute *att
     /*OP add for juge rtp on end*/
     if (((val >=  RINGTONES_START_INDEX && val <= RINGTONES_END_INDEX)
         || (val >=  NEW_RING_START && val <= NEW_RING_END)
-<<<<<<< HEAD
 		|| (val >=  OS12_NEW_RING_START && val <= OS12_NEW_RING_END)
-=======
->>>>>>> 30d479c5d077 (drivers: misc: Import aw8697 haptic drivers from realme Q5pro/GT-Neo-3T AndroidS)
         || (val >=  REALME_RING_START && val <= REALME_RING_END)
 #ifdef  CONFIG_OPLUS_HAPTIC_OOS
         || (val >= OPLUS_RING_START_INDEX && val <= OPLUS_RING_END_INDEX)
@@ -9727,11 +9057,8 @@ static ssize_t aw8697_rtp_store(struct device *dev, struct device_attribute *att
 #ifdef CONFIG_OPLUS_HAPTIC_OOS
 	} else if (aw8697->device_id == 1815) {
 		rtp_max_num = sizeof(aw8697_rtp_name_1815_170Hz) / AW8697_RTP_NAME_MAX;
-<<<<<<< HEAD
 	} else if (aw8697->device_id == 619) {
 		rtp_max_num = sizeof(aw8697_rtp_name_0619_170Hz) / AW8697_RTP_NAME_MAX;
-=======
->>>>>>> 30d479c5d077 (drivers: misc: Import aw8697 haptic drivers from realme Q5pro/GT-Neo-3T AndroidS)
 #endif
 	} else {
 		rtp_max_num = sizeof(aw8697_rtp_name) / AW8697_RTP_NAME_MAX;
@@ -9801,11 +9128,7 @@ static ssize_t aw8697_f0_show(struct device *dev, struct device_attribute *attr,
 
     mutex_lock(&aw8697->lock);
     aw8697->f0_cali_flag = AW8697_HAPTIC_CALI_F0;//AW8697_HAPTIC_LRA_F0;
-<<<<<<< HEAD
     aw8697_haptic_get_f0(aw8697);
-=======
-	aw8697_haptic_multiple_get_f0(aw8697);
->>>>>>> 30d479c5d077 (drivers: misc: Import aw8697 haptic drivers from realme Q5pro/GT-Neo-3T AndroidS)
     mutex_unlock(&aw8697->lock);
 
 #ifdef OPLUS_FEATURE_CHG_BASIC
@@ -9845,14 +9168,11 @@ static ssize_t aw8697_f0_store(struct device *dev, struct device_attribute *attr
 		    aw8697->f0 > F0_VAL_MAX_0815) {
 			aw8697->f0 = 1700;
 		}
-<<<<<<< HEAD
 	} else if (aw8697->device_id == 81538) {
 		aw8697->f0 = val;
 		if (aw8697->f0 < F0_VAL_MIN_081538 || aw8697->f0 > F0_VAL_MAX_081538) {
 			aw8697->f0 = 1500;
 		}
-=======
->>>>>>> 30d479c5d077 (drivers: misc: Import aw8697 haptic drivers from realme Q5pro/GT-Neo-3T AndroidS)
 	} else if (aw8697->device_id == 832) {
 		aw8697->f0 = val;
 		if (aw8697->f0 < F0_VAL_MIN_0832 || aw8697->f0 > F0_VAL_MAX_0832) {
@@ -9892,11 +9212,7 @@ static ssize_t aw8697_cali_show(struct device *dev, struct device_attribute *att
     ssize_t len = 0;
     mutex_lock(&aw8697->lock);
     aw8697->f0_cali_flag = AW8697_HAPTIC_CALI_F0;
-<<<<<<< HEAD
     aw8697_haptic_get_f0(aw8697);
-=======
-	aw8697_haptic_multiple_get_f0(aw8697);
->>>>>>> 30d479c5d077 (drivers: misc: Import aw8697 haptic drivers from realme Q5pro/GT-Neo-3T AndroidS)
     mutex_unlock(&aw8697->lock);
     len += snprintf(buf+len, PAGE_SIZE-len, "aw8697 cali f0 = %d\n", aw8697->f0);
     return len;
@@ -10572,14 +9888,7 @@ static ssize_t aw8697_f0_data_store(struct device *dev, struct device_attribute 
 
     pr_err("%s:  f0 = %d\n", __FUNCTION__, val);
 
-<<<<<<< HEAD
     aw8697->clock_system_f0_cali_lra = val
-=======
-    aw8697->clock_system_f0_cali_lra = val;
-#ifdef CONFIG_OPLUS_HAPTIC_OOS
-	aw8697_check_f0_data(aw8697);
-#endif
->>>>>>> 30d479c5d077 (drivers: misc: Import aw8697 haptic drivers from realme Q5pro/GT-Neo-3T AndroidS)
     mutex_lock(&aw8697->lock);
     aw8697_i2c_write(aw8697, AW8697_REG_TRIM_LRA, aw8697->clock_system_f0_cali_lra);
     mutex_unlock(&aw8697->lock);
@@ -10625,13 +9934,8 @@ static ssize_t aw8697_osc_cali_show(struct device *dev, struct device_attribute 
 #ifdef CONFIG_OPLUS_HAPTIC_OOS
 	aw8697->microsecond = 5000000;
 #endif
-<<<<<<< HEAD
 	printk("aw8697_osc_cali_show: 2018_microsecond:%lu \n", aw8697->microsecond);
 	len += snprintf(buf + len, PAGE_SIZE - len, "%lu\n", aw8697->microsecond);
-=======
-	printk("aw8697_osc_cali_show: 2018_microsecond:%ld \n", aw8697->microsecond);
-	len += snprintf(buf + len, PAGE_SIZE - len, "%ld\n", aw8697->microsecond);
->>>>>>> 30d479c5d077 (drivers: misc: Import aw8697 haptic drivers from realme Q5pro/GT-Neo-3T AndroidS)
     return len;
 }
 #endif
@@ -11176,10 +10480,7 @@ static DEVICE_ATTR(activate_mode, S_IWUSR | S_IRUGO, aw8697_activate_mode_show, 
 static DEVICE_ATTR(index, S_IWUSR | S_IRUGO, aw8697_index_show, aw8697_index_store);
 static DEVICE_ATTR(vmax, S_IWUSR | S_IRUGO, aw8697_vmax_show, aw8697_vmax_store);
 static DEVICE_ATTR(gain, S_IWUSR | S_IRUGO, aw8697_gain_show, aw8697_gain_store);
-<<<<<<< HEAD
 static DEVICE_ATTR(level, S_IWUSR | S_IRUGO, aw8697_level_show, aw8697_level_store);
-=======
->>>>>>> 30d479c5d077 (drivers: misc: Import aw8697 haptic drivers from realme Q5pro/GT-Neo-3T AndroidS)
 static DEVICE_ATTR(seq, S_IWUSR | S_IRUGO, aw8697_seq_show, aw8697_seq_store);
 static DEVICE_ATTR(loop, S_IWUSR | S_IRUGO, aw8697_loop_show, aw8697_loop_store);
 static DEVICE_ATTR(register, S_IWUSR | S_IRUGO, aw8697_reg_show, aw8697_reg_store);
@@ -11232,10 +10533,7 @@ static struct attribute *aw8697_vibrator_attributes[] = {
     &dev_attr_index.attr,
     &dev_attr_vmax.attr,
     &dev_attr_gain.attr,
-<<<<<<< HEAD
     &dev_attr_level.attr,
-=======
->>>>>>> 30d479c5d077 (drivers: misc: Import aw8697 haptic drivers from realme Q5pro/GT-Neo-3T AndroidS)
     &dev_attr_seq.attr,
     &dev_attr_loop.attr,
     &dev_attr_register.attr,
@@ -11312,19 +10610,11 @@ static void aw8697_vibrator_work_routine(struct work_struct *work)
         mutex_lock(&aw8697->lock);
         if(aw8697->activate_mode == AW8697_HAPTIC_ACTIVATE_RAM_MODE) {
 
-<<<<<<< HEAD
 			if (aw8697->device_id == 832 || aw8697->device_id == 833 || aw8697->device_id == 81538) {
 				aw8697_haptic_ram_vbat_comp(aw8697, false);
 			} else {
 				aw8697_haptic_ram_vbat_comp(aw8697, true);
 			}
-=======
-            if (aw8697->device_id == 832 || aw8697->device_id == 833)
-                aw8697_haptic_ram_vbat_comp(aw8697, false);
-            else
-                aw8697_haptic_ram_vbat_comp(aw8697, true);
-
->>>>>>> 30d479c5d077 (drivers: misc: Import aw8697 haptic drivers from realme Q5pro/GT-Neo-3T AndroidS)
             aw8697_haptic_play_repeat_seq(aw8697, true);
         } else if(aw8697->activate_mode == AW8697_HAPTIC_ACTIVATE_CONT_MODE) {
             aw8697_haptic_cont(aw8697);
@@ -11557,12 +10847,9 @@ static int aw8697_parse_dt(struct device *dev, struct aw8697 *aw8697,
     if (of_property_read_u32(np, "qcom,device_id", &aw8697->device_id))
         aw8697->device_id = 815;
     dev_info(dev, "%s: aw8697->device_id=%d\n", __func__, aw8697->device_id);
-<<<<<<< HEAD
 	if (of_property_read_u8(np, "qcom,aw8697_boost_voltage", &AW8697_HAPTIC_HIGH_LEVEL_REG_VAL)) {
 	}
 	dev_info(dev, "%s: aw8697 boost_voltage=%d\n", __func__, AW8697_HAPTIC_HIGH_LEVEL_REG_VAL);
-=======
->>>>>>> 30d479c5d077 (drivers: misc: Import aw8697 haptic drivers from realme Q5pro/GT-Neo-3T AndroidS)
 #endif
     return 0;
 }
@@ -11788,7 +11075,6 @@ static int aw8697_i2c_probe(struct i2c_client *i2c, const struct i2c_device_id *
         aw8697->irq_gpio = -1;
     }
 
-<<<<<<< HEAD
 #if defined (OPLUS_FEATURE_CHG_BASIC) && !defined(CONFIG_OPLUS_HAPTIC_OOS)
 	if (aw8697->device_id == DEV_ID_0619)
 		AW8697_HAPTIC_RAM_VBAT_COMP_GAIN = 0x3B;
@@ -11818,8 +11104,6 @@ static int aw8697_i2c_probe(struct i2c_client *i2c, const struct i2c_device_id *
 	}
 #endif
 
-=======
->>>>>>> 30d479c5d077 (drivers: misc: Import aw8697 haptic drivers from realme Q5pro/GT-Neo-3T AndroidS)
     if (gpio_is_valid(aw8697->reset_gpio)) {
         ret = devm_gpio_request_one(&i2c->dev, aw8697->reset_gpio,
             GPIOF_OUT_INIT_LOW, "aw8697_rst");
@@ -11920,10 +11204,6 @@ static int aw8697_i2c_probe(struct i2c_client *i2c, const struct i2c_device_id *
 #ifdef OPLUS_FEATURE_CHG_BASIC
     INIT_WORK(&aw8697->motor_old_test_work, motor_old_test_work);
     aw8697->motor_old_test_mode = 0;
-<<<<<<< HEAD
-=======
-    atomic_set(&aw8697->qos_cnt, 0);
->>>>>>> 30d479c5d077 (drivers: misc: Import aw8697 haptic drivers from realme Q5pro/GT-Neo-3T AndroidS)
 #endif
 #ifdef CONFIG_OPLUS_HAPTIC_OOS
 #ifdef CONFIG_QGKI

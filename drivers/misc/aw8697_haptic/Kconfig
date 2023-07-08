@@ -3,11 +3,8 @@ config AW8697_HAPTIC
     depends on I2C
     help
       This option enables support for aw8697 series Haptic Driver.
-<<<<<<< HEAD
 
 config HAPTIC_FEEDBACK
     tristate "Haptic driver feedback for awinic aw8697 series"
     help
       This option enables support for aw8697 series Haptic Driver Feedback.
-=======
->>>>>>> 30d479c5d077 (drivers: misc: Import aw8697 haptic drivers from realme Q5pro/GT-Neo-3T AndroidS)
