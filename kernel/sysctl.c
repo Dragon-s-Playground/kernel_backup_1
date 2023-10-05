@@ -672,18 +672,6 @@ static struct ctl_table kern_table[] = {
 		.extra1		= &zero,
 		.extra2		= &one_thousand,
 	},
-#endif
-
-#ifdef OPLUS_FEATURE_EDTASK_IMPROVE
-	{
-		.procname	= "ed_task_enabled",
-		.data		= &sysctl_ed_task_enabled,
-		.maxlen		= sizeof(int),
-		.mode		= 0666,
-		.proc_handler	= proc_dointvec,
-	},
-#endif /* OPLUS_FEATURE_EDTASK_IMPROVE */
-
 	{
 		.procname	= "sched_force_lb_enable",
 		.data		= &sysctl_sched_force_lb_enable,
@@ -693,7 +681,7 @@ static struct ctl_table kern_table[] = {
 		.extra1		= &zero,
 		.extra2		= &one,
 	},
-
+#endif
 #ifdef CONFIG_SCHED_DEBUG
 	{
 		.procname       = "sched_cstate_aware",
