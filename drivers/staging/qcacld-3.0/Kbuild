@@ -1,10 +1,8 @@
 # We can build either as part of a standalone Kernel build or as
 # an external module.  Determine which mechanism is being used
-ifeq ($(MODNAME),)
+#ifeq ($(MODNAME),)
 	KERNEL_BUILD := y
-else
-	KERNEL_BUILD := n
-endif
+
 ifeq ($(KERNEL_BUILD), y)
 	# These are provided in external module based builds
 	# Need to explicitly define for Kernel-based builds
