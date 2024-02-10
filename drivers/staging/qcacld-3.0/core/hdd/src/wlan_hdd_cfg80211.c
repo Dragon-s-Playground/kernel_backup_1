@@ -10343,12 +10343,7 @@ __wlan_hdd_cfg80211_set_ns_offload(struct wiphy *wiphy,
 
 	if (!ucfg_pmo_is_active_mode_offloaded(hdd_ctx->psoc)) {
 		hdd_warn("Active mode offload is disabled");
-		#ifndef OPLUS_BUG_STABILITY
-		//Modify the return value for VTS test
 		return -EINVAL;
-		#else /* OPLUS_BUG_STABILITY */
-		return 0;
-		#endif /* OPLUS_BUG_STABILITY */
 	}
 
 	if (wlan_cfg80211_nla_parse(tb, QCA_WLAN_VENDOR_ATTR_ND_OFFLOAD_MAX,
@@ -15414,8 +15409,6 @@ const struct wiphy_vendor_command hdd_wiphy_vendor_commands[] = {
 			 WIPHY_VENDOR_CMD_NEED_NETDEV,
 		.doit = wlan_hdd_cfg80211_get_logger_supp_feature
 	},
-	#ifndef OPLUS_BUG_STABILITY
-	//Remove for bug 1148060:get hidden AP after connect.
 	{
 		.info.vendor_id = QCA_NL80211_VENDOR_ID,
 		.info.subcmd = QCA_NL80211_VENDOR_SUBCMD_TRIGGER_SCAN,
@@ -15424,7 +15417,6 @@ const struct wiphy_vendor_command hdd_wiphy_vendor_commands[] = {
 			WIPHY_VENDOR_CMD_NEED_RUNNING,
 		.doit = wlan_hdd_cfg80211_vendor_scan
 	},
-	#endif
 
 	/* Vendor abort scan */
 	{
@@ -18696,8 +18688,7 @@ static int wlan_hdd_cfg80211_connect_start(struct hdd_adapter *adapter,
 				    const u8 *ssid, size_t ssid_len,
 				    const u8 *bssid, const u8 *bssid_hint,
 				    uint32_t oper_freq,
-				    enum nl80211_chan_width ch_width,
-				    uint32_t ch_freq_hint)
+				    enum nl80211_chan_width ch_width)
 {
 	int status = 0;
 	QDF_STATUS qdf_status;
@@ -18912,8 +18903,6 @@ static int wlan_hdd_cfg80211_connect_start(struct hdd_adapter *adapter,
 			hdd_select_cbmode(adapter, oper_freq,
 					  &roam_profile->ch_params);
 		}
-
-		roam_profile->freq_hint = ch_freq_hint;
 
 		if (wlan_hdd_cfg80211_check_pmf_valid(roam_profile)) {
 			status = -EINVAL;
@@ -20484,8 +20473,7 @@ static int __wlan_hdd_cfg80211_join_ibss(struct wiphy *wiphy,
 						 params->ssid_len,
 						 bssid.bytes, NULL,
 						 conn_info_channel,
-						 params->chandef.width,
-						 0);
+						 params->chandef.width);
 
 	if (0 > status) {
 		hdd_err("connect failed");
@@ -21162,7 +21150,6 @@ static int __wlan_hdd_cfg80211_connect(struct wiphy *wiphy,
 	struct hdd_context *hdd_ctx;
 	uint8_t vdev_id_list[MAX_NUMBER_OF_CONC_CONNECTIONS], i;
 	bool disable_nan = true;
-	uint32_t ch_freq_hint = 0;
 
 	hdd_enter();
 
@@ -21287,15 +21274,11 @@ static int __wlan_hdd_cfg80211_connect(struct wiphy *wiphy,
 	else
 		ch_freq = 0;
 
-	if (req->channel_hint)
-		ch_freq_hint = req->channel_hint->center_freq;
-
 	wlan_hdd_check_ht20_ht40_ind(hdd_ctx, adapter, req);
 
 	status = wlan_hdd_cfg80211_connect_start(adapter, req->ssid,
 						 req->ssid_len, req->bssid,
-						 bssid_hint, ch_freq, 0,
-						 ch_freq_hint);
+						 bssid_hint, ch_freq, 0);
 	if (status) {
 		wlan_hdd_cfg80211_clear_privacy(adapter);
 		hdd_err("connect failed");

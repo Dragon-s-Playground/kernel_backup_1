@@ -234,33 +234,6 @@ static struct class *class;
 static dev_t device;
 static bool hdd_loaded = false;
 
-#if 0
-static struct gwlan_loader *wlan_loader;
-static ssize_t wlan_boot_cb(struct kobject *kobj,
-			    struct kobj_attribute *attr,
-			    const char *buf, size_t count);
-struct gwlan_loader {
-	bool loaded_state;
-	struct kobject *boot_wlan_obj;
-	struct attribute_group *attr_group;
-};
-
-static struct kobj_attribute wlan_boot_attribute =
-	__ATTR(boot_wlan, 0220, NULL, wlan_boot_cb);
-
-static struct attribute *attrs[] = {
-	&wlan_boot_attribute.attr,
-	NULL,
-};
-#define MODULE_INITIALIZED 1
-
-#ifdef MULTI_IF_NAME
-#define WLAN_LOADER_NAME "boot_" MULTI_IF_NAME
-#else
-#define WLAN_LOADER_NAME "boot_wlan"
-#endif
-#endif
-
 /* the Android framework expects this param even though we don't use it */
 #define BUF_LEN 20
 static char fwpath_buffer[BUF_LEN];
@@ -380,83 +353,6 @@ struct sock *cesium_nl_srv_sock;
 #ifdef FEATURE_WLAN_AUTO_SHUTDOWN
 static void wlan_hdd_auto_shutdown_cb(void);
 #endif
-
-#ifdef OPLUS_FEATURE_WIFI_DCS_SWITCH
-//Add for wifi switch monitor
-static struct wlan_hostdriver_loadresult captue_wlan_hostdriver_loadresult = {
-	.insmod_status = 0,
-	.rmmod_status = 0,
-	.ini_prase_status = 0,
-};
-
-
-void wlan_driver_send_uevent(char *enable)
-{
-	int ret_val;
-	char event[] = "SUBSYSTEM=msm_subsys";
-	char wifi_switch_event[30] = {'\0'};
-	char wifi_enable[30] = {'\0'};
-	char ini_prase[30] = {'\0'};
-	char insmod_stats[30] = {'\0'};
-	char rmmod_stats[30] = {'\0'};
-	char *envp[7];
-	qdf_device_t qdf_dev = cds_get_context(QDF_MODULE_ID_QDF_DEVICE);
-
-	snprintf(wifi_switch_event, sizeof(wifi_switch_event), "WLAN_SWITCH_EVENT=driver");
-
-	if(enable) {
-		snprintf(wifi_enable, sizeof(wifi_enable), "WIFI_TURNING=%s", enable);
-	} else {
-		snprintf(wifi_enable, sizeof(wifi_enable), "WIFI_TURNING=unkown");
-	}
-
-	if(captue_wlan_hostdriver_loadresult.ini_prase_status == INI_PRASE_SUCCESS) {
-		snprintf(ini_prase, sizeof(ini_prase), "INIPRASE=%s", "success");
-	} else if(captue_wlan_hostdriver_loadresult.ini_prase_status == INI_PRASE_FAIL) {
-		snprintf(ini_prase, sizeof(ini_prase), "INIPRASE=%s", "fail");
-	} else {
-		snprintf(ini_prase, sizeof(ini_prase), "INIPRASE=%s", "unknow");
-	}
-
-	if(captue_wlan_hostdriver_loadresult.insmod_status == INSMOD_SUCCESS) {
-		snprintf(insmod_stats, sizeof(insmod_stats), "INSMODSTATUS=%s", "success");
-	} else if(captue_wlan_hostdriver_loadresult.insmod_status == INSMOD_FAIL) {
-		snprintf(insmod_stats, sizeof(insmod_stats), "INSMODSTATUS=%s", "fail");
-	} else {
-		snprintf(insmod_stats, sizeof(insmod_stats), "INSMODSTATUS=%s", "unknow");
-	}
-
-	if(captue_wlan_hostdriver_loadresult.rmmod_status == RMMOD_SUCCESS) {
-		snprintf(rmmod_stats, sizeof(rmmod_stats), "RMMODSTATUS=%s", "success");
-	} else if(captue_wlan_hostdriver_loadresult.rmmod_status == RMMOD_FAIL) {
-		snprintf(rmmod_stats, sizeof(rmmod_stats), "RMMODSTATUS=%s", "fail");
-	} else {
-		snprintf(rmmod_stats, sizeof(rmmod_stats), "RMMODSTATUS=%s", "unknow");
-	}
-
-	envp[0] = (char *)&event;
-	wifi_switch_event[30] = 0;
-	envp[1] = (char *)&wifi_switch_event;
-	wifi_enable[30] = 0;
-	envp[2] = (char *)&wifi_enable;
-	ini_prase[30] = 0;
-	envp[3] = (char *)&ini_prase;
-	insmod_stats[30] = 0;
-	envp[4] = (char *)&insmod_stats;
-	rmmod_stats[30] = 0;
-	envp[5] = (char *)&rmmod_stats;
-	envp[6] = 0;
-
-	if(qdf_dev && qdf_dev->dev){
-		ret_val = kobject_uevent_env(&(qdf_dev->dev->kobj), KOBJ_CHANGE, envp);
-		if(!ret_val){
-			pr_info("wlan switch:kobject_uevent_env %s\n", enable);
-		}else{
-			pr_info("wlan switch:kobject_uevent_env fail,error=%d!\n", ret_val);
-		}
-	}
-}
-#endif /* OPLUS_FEATURE_WIFI_DCS_SWITCH */
 
 QDF_STATUS hdd_common_roam_callback(struct wlan_objmgr_psoc *psoc,
 				     uint8_t session_id,
@@ -11957,18 +11853,9 @@ struct hdd_context *hdd_context_create(struct device *dev)
 	if (QDF_IS_STATUS_ERROR(status)) {
 		hdd_err("Failed to parse cfg %s; status:%d\n",
 			WLAN_INI_FILE, status);
-		#ifdef OPLUS_FEATURE_WIFI_DCS_SWITCH
-		//Add for wifi switch monitor
-		captue_wlan_hostdriver_loadresult.ini_prase_status = INI_PRASE_FAIL;
-		#endif /* OPLUS_FEATURE_WIFI_DCS_SWITCH */
 		ret = qdf_status_to_os_return(status);
 		goto err_free_config;
 	}
-
-	#ifdef OPLUS_FEATURE_WIFI_DCS_SWITCH
-	//Add for wifi switch monitor
-	captue_wlan_hostdriver_loadresult.ini_prase_status = INI_PRASE_SUCCESS;
-	#endif /* OPLUS_FEATURE_WIFI_DCS_SWITCH */
 
 	ret = hdd_objmgr_create_and_store_psoc(hdd_ctx, DEFAULT_PSOC_ID);
 	if (ret) {
@@ -15752,19 +15639,11 @@ static ssize_t wlan_hdd_state_ctrl_param_write(struct file *filp,
 	if (strncmp(buf, wlan_off_str, strlen(wlan_off_str)) == 0) {
 		hdd_info("Wifi turning off from UI\n");
 		hdd_inform_wifi_off();
-		#ifdef OPLUS_FEATURE_WIFI_DCS_SWITCH
-		//Add for wifi switch monitor
-		wlan_driver_send_uevent("TURN_OFF");
-		#endif /* OPLUS_FEATURE_WIFI_DCS_SWITCH */
 		goto exit;
 	}
 
 	if (strncmp(buf, wlan_on_str, strlen(wlan_on_str)) == 0) {
 		hdd_info("Wifi Turning On from UI\n");
-		#ifdef OPLUS_FEATURE_WIFI_DCS_SWITCH
-		//Add for wifi switch monitor
-		wlan_driver_send_uevent("TURN_ON");
-		#endif /* OPLUS_FEATURE_WIFI_DCS_SWITCH */
 		turning_on = true;
 	}
 
@@ -16659,10 +16538,6 @@ static int hdd_driver_load(void)
 
 	hdd_loaded = true;
 	hdd_debug("%s: driver loaded", WLAN_MODULE_NAME);
-	#ifdef OPLUS_FEATURE_WIFI_DCS_SWITCH
-	//Add for wifi switch monitor
- 	captue_wlan_hostdriver_loadresult.insmod_status = INSMOD_SUCCESS;
-	#endif /* OPLUS_FEATURE_WIFI_DCS_SWITCH */
 
 	return 0;
 
@@ -16694,10 +16569,6 @@ sync_deinit:
 	hdd_qdf_deinit();
 
 exit:
-	#ifdef OPLUS_FEATURE_WIFI_DCS_SWITCH
-	//Add for wifi switch monitor
-	captue_wlan_hostdriver_loadresult.insmod_status = INSMOD_FAIL;
-	#endif /* OPLUS_FEATURE_WIFI_DCS_SWITCH */
 	return errno;
 }
 
@@ -16729,10 +16600,6 @@ static void hdd_driver_unload(void)
 	QDF_BUG(QDF_IS_STATUS_SUCCESS(status));
 	if (QDF_IS_STATUS_ERROR(status)) {
 		hdd_err("Unable to unload wlan; status:%u", status);
-		#ifdef OPLUS_FEATURE_WIFI_DCS_SWITCH
-		//Add for wifi switch monitor
-		captue_wlan_hostdriver_loadresult.rmmod_status = RMMOD_SUCCESS;
-		#endif /* OPLUS_FEATURE_WIFI_DCS_SWITCH */
 		return;
 	}
 
@@ -16771,10 +16638,6 @@ static void hdd_driver_unload(void)
 	QDF_BUG(QDF_IS_STATUS_SUCCESS(status));
 	if (QDF_IS_STATUS_ERROR(status)) {
 		hdd_err("Unable to unload wlan; status:%u", status);
-		#ifdef OPLUS_FEATURE_WIFI_DCS_SWITCH
-		//Add for wifi switch monitor
-		captue_wlan_hostdriver_loadresult.rmmod_status = RMMOD_SUCCESS;
-		#endif /* OPLUS_FEATURE_WIFI_DCS_SWITCH */
 		return;
 	}
 
@@ -16795,138 +16658,7 @@ static void hdd_driver_unload(void)
 	osif_sync_deinit();
 
 	hdd_qdf_deinit();
-
-	#ifdef OPLUS_FEATURE_WIFI_DCS_SWITCH
-	//Add for wifi switch monitor
-	captue_wlan_hostdriver_loadresult.rmmod_status = RMMOD_FAIL;
-	#endif /* OPLUS_FEATURE_WIFI_DCS_SWITCH */
 }
-
-#if 0
-/**
- * wlan_boot_cb() - Wlan boot callback
- * @kobj:      object whose directory we're creating the link in.
- * @attr:      attribute the user is interacting with
- * @buff:      the buffer containing the user data
- * @count:     number of bytes in the buffer
- *
- * This callback is invoked when the fs is ready to start the
- * wlan driver initialization.
- *
- * Return: 'count' on success or a negative error code in case of failure
- */
-static ssize_t wlan_boot_cb(struct kobject *kobj,
-			    struct kobj_attribute *attr,
-			    const char *buf,
-			    size_t count)
-{
-
-	if (wlan_loader->loaded_state) {
-		hdd_err("wlan driver already initialized");
-		return -EALREADY;
-	}
-
-	if (hdd_driver_load())
-		return -EIO;
-
-	wlan_loader->loaded_state = MODULE_INITIALIZED;
-
-	return count;
-}
-
-/**
- * hdd_sysfs_cleanup() - cleanup sysfs
- *
- * Return: None
- *
- */
-static void hdd_sysfs_cleanup(void)
-{
-	/* remove from group */
-	if (wlan_loader->boot_wlan_obj && wlan_loader->attr_group)
-		sysfs_remove_group(wlan_loader->boot_wlan_obj,
-				   wlan_loader->attr_group);
-
-	/* unlink the object from parent */
-	kobject_del(wlan_loader->boot_wlan_obj);
-
-	/* free the object */
-	kobject_put(wlan_loader->boot_wlan_obj);
-
-	kfree(wlan_loader->attr_group);
-	kfree(wlan_loader);
-
-	wlan_loader = NULL;
-}
-
-/**
- * wlan_init_sysfs() - Creates the sysfs to be invoked when the fs is
- * ready
- *
- * This is creates the syfs entry boot_wlan. Which shall be invoked
- * when the filesystem is ready.
- *
- * QDF API cannot be used here since this function is called even before
- * initializing WLAN driver.
- *
- * Return: 0 for success, errno on failure
- */
-static int wlan_init_sysfs(void)
-{
-	int ret = -ENOMEM;
-
-	wlan_loader = kzalloc(sizeof(*wlan_loader), GFP_KERNEL);
-	if (!wlan_loader)
-		return -ENOMEM;
-
-	wlan_loader->boot_wlan_obj = NULL;
-	wlan_loader->attr_group = kzalloc(sizeof(*(wlan_loader->attr_group)),
-					  GFP_KERNEL);
-	if (!wlan_loader->attr_group)
-		goto error_return;
-
-	wlan_loader->loaded_state = 0;
-	wlan_loader->attr_group->attrs = attrs;
-
-	wlan_loader->boot_wlan_obj = kobject_create_and_add(WLAN_LOADER_NAME,
-							    kernel_kobj);
-	if (!wlan_loader->boot_wlan_obj) {
-		hdd_err("sysfs create and add failed");
-		goto error_return;
-	}
-
-	ret = sysfs_create_group(wlan_loader->boot_wlan_obj,
-				 wlan_loader->attr_group);
-	if (ret) {
-		hdd_err("sysfs create group failed; errno:%d", ret);
-		goto error_return;
-	}
-
-	return 0;
-
-error_return:
-	hdd_sysfs_cleanup();
-
-	return ret;
-}
-
-/**
- * wlan_deinit_sysfs() - Removes the sysfs created to initialize the wlan
- *
- * Return: 0 on success or errno on failure
- */
-static int wlan_deinit_sysfs(void)
-{
-	if (!wlan_loader) {
-		hdd_err("wlan_loader is null");
-		return -EINVAL;
-	}
-
-	hdd_sysfs_cleanup();
-	return 0;
-}
-
-#endif /* MODULE */
 
 /**
  * hdd_module_init() - Module init helper
